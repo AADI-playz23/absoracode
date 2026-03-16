@@ -8,7 +8,7 @@ PROXY_USER = os.environ.get("PROXY_USER", "username")
 PROXY_PASS = os.environ.get("PROXY_PASS", "password")
 
 # **IMPORTANT: Put your exact Colab notebook URL here**
-COLAB_URL = "https://colab.research.google.com/drive/YOUR_NOTEBOOK_ID_HERE"
+COLAB_URL = "https://colab.research.google.com/drive/1Z2-3rN_7OHlKaoHhoy2tm_9c-WVp-hxB#scrollTo=jig4wwVSTBL4"
 
 def run_colab():
     cookie_data = os.environ.get("GOOGLE_COOKIES")
