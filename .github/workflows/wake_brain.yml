@@ -16,14 +16,17 @@ jobs:
         with:
           python-version: '3.10'
           
-      - name: Install Playwright & Stealth
+      - name: Install Playwright
         run: |
-          pip install playwright playwright-stealth
+          pip install playwright
           playwright install chromium
           
       - name: Execute Stealth Handoff
         env:
+          # Pulls your secure cookies from GitHub Secrets
           GOOGLE_COOKIES: ${{ secrets.GOOGLE_COOKIES }}
+          
+          # Optional: Proxy settings if you added them to GitHub Secrets
           # PROXY_SERVER: ${{ secrets.PROXY_SERVER }}
           # PROXY_USER: ${{ secrets.PROXY_USER }}
           # PROXY_PASS: ${{ secrets.PROXY_PASS }}
