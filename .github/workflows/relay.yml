@@ -1,4 +1,4 @@
-name: Nexus Relay (Cloudflare Edition)
+name: Nexus Relay (Node.js Edition)
 
 on:
   workflow_dispatch:
@@ -15,11 +15,71 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+        
       - uses: actions/setup-python@v4
         with: { python-version: '3.10' }
         
-      - name: Install Dependencies
-        run: pip install fastapi uvicorn requests nest_asyncio
+      - name: Install Node Dependencies
+        run: npm install express cors
+
+      - name: Create and Start Node.js Relay
+        env:
+          REPO: ${{ github.repository }}
+        run: |
+          cat << 'EOF' > server.js
+          const express = require('express');
+          const cors = require('cors');
+          
+          const app = express();
+          app.use(cors());
+          app.use(express.json());
+
+          const REPO = process.env.REPO;
+
+          // Handle both endpoint styles
+          app.post(['/v1/chat/completions', '/api/chat'], async (req, res) => {
+              try {
+                  // 1. Fetch the latest Brain URL from GitHub (Cache-busted)
+                  const statusUrl = `https://raw.githubusercontent.com/${REPO}/main/status.json?t=${Date.now()}`;
+                  const statusRes = await fetch(statusUrl);
+                  
+                  if (!statusRes.ok) throw new Error("Failed to read status.json from GitHub");
+                  
+                  const statusData = await statusRes.json();
+                  const brainUrl = statusData.brain_url.replace(/\/$/, ""); // Strip trailing slashes
+
+                  if (!brainUrl) throw new Error("Brain URL is empty in status.json");
+
+                  console.log(`📡 Forwarding to: ${brainUrl}/api/chat`);
+
+                  // 2. Proxy the request to Colab with Localtunnel bypass headers
+                  const response = await fetch(`${brainUrl}/api/chat`, {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                          'Bypass-Tunnel-Reminder': 'true', // CRITICAL: Bypasses Localtunnel splash
+                          'User-Agent': 'Nexus-Node-Relay/1.0'
+                      },
+                      body: JSON.stringify(req.body)
+                  });
+
+                  // 3. Return the response safely
+                  const data = await response.json();
+                  res.json(data);
+
+              } catch (error) {
+                  console.error("Relay Error:", error.message);
+                  res.status(500).json({ error: "Node.js Relay Error", details: error.message });
+              }
+          });
+
+          app.listen(8000, () => console.log('🚀 Node.js Relay running on port 8000'));
+          EOF
+          
+          # Start the server in the background
+          node server.js &
 
       - name: Setup Cloudflare Tunnel
         run: |
@@ -27,66 +87,16 @@ jobs:
           mv cloudflared-linux-amd64 cloudflared
           chmod +x cloudflared
 
-      - name: Start Relay & Tunnel
+      - name: Start Tunnel & Update GitHub
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           python -c '
-          import os, time, requests, json, base64, uvicorn, subprocess, threading, re, sys
-          from fastapi import FastAPI, Request
-          from fastapi.middleware.cors import CORSMiddleware
-
-          app = FastAPI()
-          app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
+          import os, time, requests, json, base64, subprocess, re, sys
 
           repo = os.environ.get("REPO")
           gh_token = os.environ.get("GH_TOKEN")
-
-          # --- 1. PROXY LOGIC (BULLETPROOF EDITION) ---
-          @app.post("/v1/chat/completions")
-          @app.post("/api/chat")
-          async def proxy(request: Request):
-              try:
-                  # 1. Fetch Brain URL securely via API (Bypasses GitHub cache and 404s)
-                  api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
-                  headers_gh = {
-                      "Authorization": f"token {gh_token}", 
-                      "Accept": "application/vnd.github.v3+json"
-                  }
-                  gh_res = requests.get(api_url, headers=headers_gh)
-                  
-                  if gh_res.status_code != 200:
-                      return {"error": "Failed to read status.json", "details": gh_res.text}
-                      
-                  content = json.loads(base64.b64decode(gh_res.json()["content"]).decode())
-                  
-                  # 2. Extract URL and remove trailing slashes to prevent //api/chat formatting errors
-                  brain_url = content.get("brain_url", "").rstrip("/")
-                  
-                  # 3. Forward payload to Colab
-                  headers = {
-                      "Bypass-Tunnel-Reminder": "true",
-                      "User-Agent": "Nexus-Relay/1.0"
-                  }
-                  payload = await request.json()
-                  resp = requests.post(f"{brain_url}/api/chat", headers=headers, json=payload)
-                  
-                  # 4. Safely parse the response so it never crashes on plain-text errors again!
-                  try:
-                      return resp.json()
-                  except Exception:
-                      return {"error": "Colab rejected the request", "details": f"HTTP {resp.status_code}: {resp.text}"}
-                      
-              except Exception as e: 
-                  return {"error": "Relay Exception", "details": str(e)}
-
-          # --- 2. START CLOUDFLARE TUNNEL ---
-          def start_server():
-              uvicorn.run(app, host="0.0.0.0", port=8000)
-          
-          threading.Thread(target=start_server, daemon=True).start()
-          time.sleep(3)
 
           print("🚇 Starting Cloudflare Tunnel...", flush=True)
           proc = subprocess.Popen(["./cloudflared", "tunnel", "--url", "http://localhost:8000"], 
@@ -107,12 +117,12 @@ jobs:
                           break
           
           if not relay_url:
-              print("❌ Cloudflare failed to generate a URL. Check the CF LOG above.", flush=True)
+              print("❌ Cloudflare failed to generate a URL.", flush=True)
               sys.exit(1)
           
           print(f"✅ RELAY LIVE: {relay_url}", flush=True)
 
-          # --- 3. UPDATE GITHUB REGISTRY ---
+          # --- UPDATE GITHUB REGISTRY ---
           api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
           headers = {
               "Authorization": f"token {gh_token}",
@@ -126,21 +136,6 @@ jobs:
               content["last_updated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
               
               requests.put(api_url, headers=headers, json={
-                  "message": "Update Relay URL (Cloudflare)",
+                  "message": "Update Relay URL (Node.js)",
                   "content": base64.b64encode(json.dumps(content).encode()).decode(),
-                  "sha": curr["sha"]
-              })
-              print("🎉 GitHub Registry Updated!", flush=True)
-          except Exception as e:
-              print(f"❌ Failed to update registry: {e}", flush=True)
-
-          # --- 4. HANDOFF TIMER ---
-          print("⏳ Node Active. Sleeping for 5.5 hours...", flush=True)
-          time.sleep(19800)
-          
-          print("♻️ Triggering Handoff...", flush=True)
-          requests.post(f"https://api.github.com/repos/{repo}/dispatches", 
-                        headers=headers, json={"event_type": "handoff"})
-          
-          time.sleep(300)
-          '
+                  "sha": curr["sha
