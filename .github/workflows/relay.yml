@@ -43,24 +43,43 @@ jobs:
           repo = os.environ.get("REPO")
           gh_token = os.environ.get("GH_TOKEN")
 
-          # --- 1. PROXY LOGIC ---
+          # --- 1. PROXY LOGIC (BULLETPROOF EDITION) ---
           @app.post("/v1/chat/completions")
           @app.post("/api/chat")
           async def proxy(request: Request):
-              # Cache busting: force GitHub to give us the freshest status.json
-              status_url = f"https://raw.githubusercontent.com/{repo}/main/status.json?t={int(time.time())}"
               try:
-                  brain_url = requests.get(status_url).json()["brain_url"]
+                  # 1. Fetch Brain URL securely via API (Bypasses GitHub cache and 404s)
+                  api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
+                  headers_gh = {
+                      "Authorization": f"token {gh_token}", 
+                      "Accept": "application/vnd.github.v3+json"
+                  }
+                  gh_res = requests.get(api_url, headers=headers_gh)
                   
-                  # CRITICAL: Bypass Localtunnel splash screen
-                  headers = {"Bypass-Tunnel-Reminder": "true"}
+                  if gh_res.status_code != 200:
+                      return {"error": "Failed to read status.json", "details": gh_res.text}
+                      
+                  content = json.loads(base64.b64decode(gh_res.json()["content"]).decode())
                   
-                  # Forward the exact JSON payload to the Colab Brain
+                  # 2. Extract URL and remove trailing slashes to prevent //api/chat formatting errors
+                  brain_url = content.get("brain_url", "").rstrip("/")
+                  
+                  # 3. Forward payload to Colab
+                  headers = {
+                      "Bypass-Tunnel-Reminder": "true",
+                      "User-Agent": "Nexus-Relay/1.0"
+                  }
                   payload = await request.json()
                   resp = requests.post(f"{brain_url}/api/chat", headers=headers, json=payload)
-                  return resp.json()
+                  
+                  # 4. Safely parse the response so it never crashes on plain-text errors again!
+                  try:
+                      return resp.json()
+                  except Exception:
+                      return {"error": "Colab rejected the request", "details": f"HTTP {resp.status_code}: {resp.text}"}
+                      
               except Exception as e: 
-                  return {"error": "Brain or Relay Offline", "details": str(e)}
+                  return {"error": "Relay Exception", "details": str(e)}
 
           # --- 2. START CLOUDFLARE TUNNEL ---
           def start_server():
