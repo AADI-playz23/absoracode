@@ -3,7 +3,6 @@ import time
 import json
 from playwright.sync_api import sync_playwright
 
-# Default to empty strings so it knows not to use a fake proxy
 PROXY_SERVER = os.environ.get("PROXY_SERVER", "")
 PROXY_USER = os.environ.get("PROXY_USER", "")
 PROXY_PASS = os.environ.get("PROXY_PASS", "")
@@ -17,19 +16,34 @@ def run_colab():
         print("❌ Error: GOOGLE_COOKIES secret not found!")
         return
 
-    print("🧩 Parsing Cookies...")
+    print("🧩 Parsing and Sanitizing Cookies...")
     try:
         parsed_cookies = json.loads(cookie_data)
-        final_json = {"cookies": parsed_cookies} if isinstance(parsed_cookies, list) else parsed_cookies
+        cookie_list = parsed_cookies if isinstance(parsed_cookies, list) else parsed_cookies.get("cookies", [])
+        
+        # --- CLEAN UP WEIRD COOKIE FORMATS ---
+        for c in cookie_list:
+            if "sameSite" in c:
+                val = str(c["sameSite"]).lower()
+                if val in ["no_restriction", "none", "null", "unspecified"]:
+                    c["sameSite"] = "None"
+                elif val == "lax":
+                    c["sameSite"] = "Lax"
+                elif val == "strict":
+                    c["sameSite"] = "Strict"
+                else:
+                    del c["sameSite"] # Delete invalid keys so they don't crash Playwright
+
+        final_json = {"cookies": cookie_list}
         with open("google_auth.json", "w") as f:
             json.dump(final_json, f, indent=2)
+            
     except Exception as e:
         print(f"❌ CRITICAL JSON ERROR: {e}")
         return
 
     print("🚀 Booting Stealth Browser...")
     
-    # Only configure proxy if a real URL was provided
     proxy_settings = {
         "server": PROXY_SERVER,
         "username": PROXY_USER,
@@ -54,7 +68,9 @@ def run_colab():
 
         print(f"🌐 Navigating to Colab...")
         page.goto(COLAB_URL)
-        time.sleep(15) 
+        
+        # Increased wait time for Google's UI to load fully
+        time.sleep(20) 
 
         print("⚡ Triggering Run All (Ctrl+F9)...")
         page.keyboard.press("Control+F9")
