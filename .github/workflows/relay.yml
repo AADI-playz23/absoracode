@@ -22,35 +22,40 @@ jobs:
 
       - name: Setup Cloudflare Tunnel
         run: |
-          wget -q https://github.com
+          # FIXED: Proper download link for the cloudflared binary
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           mv cloudflared-linux-amd64 cloudflared
           chmod +x cloudflared
 
       - name: Start Relay & Tunnel
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }} # Ensure you have this in your repository secrets!
           REPO: ${{ github.repository }}
-          PRIVATE_REPO: "YOUR_USER/YOUR_PRIVATE_REPO"
         run: |
           python -c '
-          import os, time, requests, json, base64, uvicorn, subprocess, threading
+          import os, time, requests, json, base64, uvicorn, subprocess, threading, re
           from fastapi import FastAPI, Request
           from fastapi.middleware.cors import CORSMiddleware
 
           app = FastAPI()
           app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-          # --- 1. PROXY LOGIC (Same as before) ---
+          # FIXED: Extract env vars here to avoid quote-escaping issues in the f-strings below
+          repo = os.environ.get("REPO")
+          gh_token = os.environ.get("GH_TOKEN")
+
+          # --- 1. PROXY LOGIC ---
           @app.post("/v1/chat/completions")
           async def proxy(request: Request):
-              status_url = f"https://raw.githubusercontent.com{os.environ["REPO"]}/main/status.json"
+              # FIXED: Added missing slash
+              status_url = f"https://raw.githubusercontent.com/{repo}/main/status.json"
               try:
                   brain_url = requests.get(status_url).json()["brain_url"]
                   return requests.post(f"{brain_url}/api/chat", json=await request.json()).json()
-              except: return {"error": "Brain Offline"}
+              except Exception as e: 
+                  return {"error": "Brain Offline", "details": str(e)}
 
           # --- 2. START CLOUDFLARE TUNNEL ---
-          # Start FastAPI on port 8000
           def start_server():
               uvicorn.run(app, host="0.0.0.0", port=8000)
           
@@ -58,7 +63,6 @@ jobs:
           time.sleep(3) # Wait for server
 
           print("🚇 Starting Cloudflare Tunnel...")
-          # The "tunnel --url" command creates a free, random Quick Tunnel
           proc = subprocess.Popen(["./cloudflared", "tunnel", "--url", "http://localhost:8000"], 
                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
@@ -67,9 +71,6 @@ jobs:
           while True:
               line = proc.stderr.readline()
               if "trycloudflare.com" in line:
-                  # Extract URL using regex or string splitting
-                  # Log line looks like: "Your quick tunnel is created! Visit https://random-name.trycloudflare.com"
-                  import re
                   match = re.search(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com", line)
                   if match:
                       relay_url = match.group(0)
@@ -78,29 +79,35 @@ jobs:
           print(f"✅ RELAY LIVE: {relay_url}")
 
           # --- 3. UPDATE GITHUB REGISTRY ---
-          api_url = f"https://api.github.com{os.environ["REPO"]}/contents/status.json"
-          headers = {"Authorization": f"token {os.environ["GH_TOKEN"]}"}
+          # FIXED: Added /repos/ to API paths
+          api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
+          headers = {
+              "Authorization": f"token {gh_token}",
+              "Accept": "application/vnd.github.v3+json"
+          }
           
-          # Get current file SHA
-          curr = requests.get(api_url, headers=headers).json()
-          content = json.loads(base64.b64decode(curr["content"]))
-          content["relay_url"] = relay_url
-          
-          # Push update
-          requests.put(api_url, headers=headers, json={
-              "message": "Update Relay URL (Cloudflare)",
-              "content": base64.b64encode(json.dumps(content).encode()).decode(),
-              "sha": curr["sha"]
-          })
+          try:
+              curr = requests.get(api_url, headers=headers).json()
+              content = json.loads(base64.b64decode(curr["content"]))
+              content["relay_url"] = relay_url
+              
+              requests.put(api_url, headers=headers, json={
+                  "message": "Update Relay URL (Cloudflare)",
+                  "content": base64.b64encode(json.dumps(content).encode()).decode(),
+                  "sha": curr["sha"]
+              })
+              print("🎉 GitHub Registry Updated!")
+          except Exception as e:
+              print(f"❌ Failed to update registry: {e}")
 
           # --- 4. HANDOFF TIMER ---
-          # Sleep for 5.5 hours (19800 seconds) then trigger next runner
+          print("⏳ Node Active. Sleeping for 5.5 hours...")
           time.sleep(19800)
           
           print("♻️ Triggering Handoff...")
-          requests.post(f"https://api.github.com{os.environ["REPO"]}/dispatches", 
-              headers=headers, json={"event_type": "handoff"})
+          # FIXED: Added /repos/ to API paths
+          requests.post(f"https://api.github.com/repos/{repo}/dispatches", 
+                        headers=headers, json={"event_type": "handoff"})
           
-          # Keep alive slightly longer to ensure handover
           time.sleep(300)
           '
