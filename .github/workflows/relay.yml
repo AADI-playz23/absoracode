@@ -14,6 +14,7 @@ jobs:
       
     steps:
       - uses: actions/checkout@v4
+      
       - uses: actions/setup-python@v4
         with: { python-version: '3.10' }
         
@@ -22,32 +23,29 @@ jobs:
 
       - name: Setup Cloudflare Tunnel
         run: |
-          # FIXED: Proper download link for the cloudflared binary
           wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           mv cloudflared-linux-amd64 cloudflared
           chmod +x cloudflared
 
       - name: Start Relay & Tunnel
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }} # Ensure you have this in your repository secrets!
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
           python -c '
-          import os, time, requests, json, base64, uvicorn, subprocess, threading, re
+          import os, time, requests, json, base64, uvicorn, subprocess, threading, re, sys
           from fastapi import FastAPI, Request
           from fastapi.middleware.cors import CORSMiddleware
 
           app = FastAPI()
           app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_methods=["*"], allow_headers=["*"])
 
-          # FIXED: Extract env vars here to avoid quote-escaping issues in the f-strings below
           repo = os.environ.get("REPO")
           gh_token = os.environ.get("GH_TOKEN")
 
           # --- 1. PROXY LOGIC ---
           @app.post("/v1/chat/completions")
           async def proxy(request: Request):
-              # FIXED: Added missing slash
               status_url = f"https://raw.githubusercontent.com/{repo}/main/status.json"
               try:
                   brain_url = requests.get(status_url).json()["brain_url"]
@@ -62,24 +60,31 @@ jobs:
           threading.Thread(target=start_server, daemon=True).start()
           time.sleep(3) # Wait for server
 
-          print("🚇 Starting Cloudflare Tunnel...")
+          print("🚇 Starting Cloudflare Tunnel...", flush=True)
           proc = subprocess.Popen(["./cloudflared", "tunnel", "--url", "http://localhost:8000"], 
                                   stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
           relay_url = None
-          # Parse logs to find the "trycloudflare.com" URL
-          while True:
-              line = proc.stderr.readline()
-              if "trycloudflare.com" in line:
-                  match = re.search(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com", line)
-                  if match:
-                      relay_url = match.group(0)
-                      break
+          print("🔍 Reading Cloudflare logs...", flush=True)
           
-          print(f"✅ RELAY LIVE: {relay_url}")
+          start_time = time.time()
+          while time.time() - start_time < 30:
+              line = proc.stderr.readline()
+              if line:
+                  print(f"CF LOG: {line.strip()}", flush=True)
+                  if "trycloudflare.com" in line:
+                      match = re.search(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com", line)
+                      if match:
+                          relay_url = match.group(0)
+                          break
+          
+          if not relay_url:
+              print("❌ Cloudflare failed to generate a URL. Check the CF LOG above.", flush=True)
+              sys.exit(1)
+          
+          print(f"✅ RELAY LIVE: {relay_url}", flush=True)
 
           # --- 3. UPDATE GITHUB REGISTRY ---
-          # FIXED: Added /repos/ to API paths
           api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
           headers = {
               "Authorization": f"token {gh_token}",
@@ -96,16 +101,15 @@ jobs:
                   "content": base64.b64encode(json.dumps(content).encode()).decode(),
                   "sha": curr["sha"]
               })
-              print("🎉 GitHub Registry Updated!")
+              print("🎉 GitHub Registry Updated!", flush=True)
           except Exception as e:
-              print(f"❌ Failed to update registry: {e}")
+              print(f"❌ Failed to update registry: {e}", flush=True)
 
           # --- 4. HANDOFF TIMER ---
-          print("⏳ Node Active. Sleeping for 5.5 hours...")
+          print("⏳ Node Active. Sleeping for 5.5 hours...", flush=True)
           time.sleep(19800)
           
-          print("♻️ Triggering Handoff...")
-          # FIXED: Added /repos/ to API paths
+          print("♻️ Triggering Handoff...", flush=True)
           requests.post(f"https://api.github.com/repos/{repo}/dispatches", 
                         headers=headers, json={"event_type": "handoff"})
           
