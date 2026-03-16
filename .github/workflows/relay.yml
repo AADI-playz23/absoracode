@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 355 # ~6 hours
     permissions:
-      contents: write # Required to update status.json
+      contents: write
       
     steps:
       - uses: actions/checkout@v4
@@ -45,20 +45,29 @@ jobs:
 
           # --- 1. PROXY LOGIC ---
           @app.post("/v1/chat/completions")
+          @app.post("/api/chat")
           async def proxy(request: Request):
-              status_url = f"https://raw.githubusercontent.com/{repo}/main/status.json"
+              # Cache busting: force GitHub to give us the freshest status.json
+              status_url = f"https://raw.githubusercontent.com/{repo}/main/status.json?t={int(time.time())}"
               try:
                   brain_url = requests.get(status_url).json()["brain_url"]
-                  return requests.post(f"{brain_url}/api/chat", json=await request.json()).json()
+                  
+                  # CRITICAL: Bypass Localtunnel splash screen
+                  headers = {"Bypass-Tunnel-Reminder": "true"}
+                  
+                  # Forward the exact JSON payload to the Colab Brain
+                  payload = await request.json()
+                  resp = requests.post(f"{brain_url}/api/chat", headers=headers, json=payload)
+                  return resp.json()
               except Exception as e: 
-                  return {"error": "Brain Offline", "details": str(e)}
+                  return {"error": "Brain or Relay Offline", "details": str(e)}
 
           # --- 2. START CLOUDFLARE TUNNEL ---
           def start_server():
               uvicorn.run(app, host="0.0.0.0", port=8000)
           
           threading.Thread(target=start_server, daemon=True).start()
-          time.sleep(3) # Wait for server
+          time.sleep(3)
 
           print("🚇 Starting Cloudflare Tunnel...", flush=True)
           proc = subprocess.Popen(["./cloudflared", "tunnel", "--url", "http://localhost:8000"], 
@@ -95,6 +104,7 @@ jobs:
               curr = requests.get(api_url, headers=headers).json()
               content = json.loads(base64.b64decode(curr["content"]))
               content["relay_url"] = relay_url
+              content["last_updated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
               
               requests.put(api_url, headers=headers, json={
                   "message": "Update Relay URL (Cloudflare)",
