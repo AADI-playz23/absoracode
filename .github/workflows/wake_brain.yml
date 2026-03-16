@@ -30,7 +30,7 @@ jobs:
           # IMPORTANT: Change 'YOUR_KAGGLE_USERNAME' below to your actual Kaggle username!
           cat << 'EOF' > kernel-metadata.json
           {
-            "id": "Aadi/absoracode-brain",
+            "id": "aadiplayz23/absoracode-brain",
             "title": "AbsoraCode Brain",
             "code_file": "brain.py",
             "language": "python",
