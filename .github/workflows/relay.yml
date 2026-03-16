@@ -20,7 +20,9 @@ jobs:
         with: { python-version: '3.10' }
         
       - name: Install Dependencies
-        run: npm install express cors node-fetch@2
+        run: |
+          npm install express cors node-fetch@2
+          pip install requests
 
       - name: Create & Start Node.js Proxy
         env:
@@ -104,8 +106,9 @@ jobs:
                   "content": base64.b64encode(json.dumps(content).encode()).decode(),
                   "sha": curr["sha"]
               })
+              print("🎉 GitHub Updated with Relay URL!", flush=True)
           except Exception as e:
-              pass
+              print(f"❌ Failed to update registry: {e}", flush=True)
 
           time.sleep(19800)
           requests.post(f"https://api.github.com/repos/{repo}/dispatches", headers=headers, json={"event_type": "handoff"})
