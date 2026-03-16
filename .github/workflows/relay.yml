@@ -1,4 +1,4 @@
-name: Nexus Relay (Node.js Edition)
+name: Nexus Relay (Node.js Infinite Loop)
 
 on:
   workflow_dispatch:
@@ -8,29 +8,28 @@ on:
 jobs:
   relay:
     runs-on: ubuntu-latest
-    timeout-minutes: 355 # ~6 hours
+    timeout-minutes: 355 # ~6 hours max
     permissions:
       contents: write
       
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
-        
       - uses: actions/setup-python@v4
         with: { python-version: '3.10' }
         
-      - name: Install Node Dependencies
-        run: npm install express cors
+      - name: Install Dependencies
+        run: npm install express cors node-fetch@2
 
-      - name: Create and Start Node.js Relay
+      - name: Create & Start Node.js Proxy
         env:
           REPO: ${{ github.repository }}
         run: |
           cat << 'EOF' > server.js
           const express = require('express');
           const cors = require('cors');
+          const fetch = require('node-fetch');
           
           const app = express();
           app.use(cors());
@@ -38,54 +37,37 @@ jobs:
 
           const REPO = process.env.REPO;
 
-          // Handle both endpoint styles
           app.post(['/v1/chat/completions', '/api/chat'], async (req, res) => {
               try {
-                  // 1. Fetch the latest Brain URL from GitHub (Cache-busted)
                   const statusUrl = `https://raw.githubusercontent.com/${REPO}/main/status.json?t=${Date.now()}`;
                   const statusRes = await fetch(statusUrl);
-                  
-                  if (!statusRes.ok) throw new Error("Failed to read status.json from GitHub");
-                  
                   const statusData = await statusRes.json();
-                  const brainUrl = statusData.brain_url.replace(/\/$/, ""); // Strip trailing slashes
+                  const brainUrl = statusData.brain_url;
 
-                  if (!brainUrl) throw new Error("Brain URL is empty in status.json");
+                  if (!brainUrl) throw new Error("Colab Brain URL is missing!");
 
-                  console.log(`📡 Forwarding to: ${brainUrl}/api/chat`);
+                  console.log(`📡 Forwarding to Colab: ${brainUrl}`);
 
-                  // 2. Proxy the request to Colab with Localtunnel bypass headers
                   const response = await fetch(`${brainUrl}/api/chat`, {
                       method: 'POST',
                       headers: {
                           'Content-Type': 'application/json',
-                          'Bypass-Tunnel-Reminder': 'true', // CRITICAL: Bypasses Localtunnel splash
-                          'User-Agent': 'Nexus-Node-Relay/1.0'
+                          'Bypass-Tunnel-Reminder': 'true' 
                       },
                       body: JSON.stringify(req.body)
                   });
 
-                  // 3. Return the response safely
                   const data = await response.json();
                   res.json(data);
 
               } catch (error) {
-                  console.error("Relay Error:", error.message);
-                  res.status(500).json({ error: "Node.js Relay Error", details: error.message });
+                  res.status(500).json({ error: "Node Relay failed to reach Colab", details: error.message });
               }
           });
 
           app.listen(8000, () => console.log('🚀 Node.js Relay running on port 8000'));
           EOF
-          
-          # Start the server in the background
           node server.js &
-
-      - name: Setup Cloudflare Tunnel
-        run: |
-          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
-          mv cloudflared-linux-amd64 cloudflared
-          chmod +x cloudflared
 
       - name: Start Tunnel & Update GitHub
         env:
@@ -93,41 +75,23 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           python -c '
-          import os, time, requests, json, base64, subprocess, re, sys
-
+          import os, time, requests, json, base64, subprocess, sys
           repo = os.environ.get("REPO")
           gh_token = os.environ.get("GH_TOKEN")
 
-          print("🚇 Starting Cloudflare Tunnel...", flush=True)
-          proc = subprocess.Popen(["./cloudflared", "tunnel", "--url", "http://localhost:8000"], 
-                                  stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+          os.system("npm install -g localtunnel")
+          proc = subprocess.Popen(["lt", "--port", "8000"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
           relay_url = None
-          print("🔍 Reading Cloudflare logs...", flush=True)
+          for _ in range(30):
+              line = proc.stdout.readline()
+              if "url is" in line:
+                  relay_url = line.split("url is:")[-1].strip()
+                  break
+              time.sleep(1)
           
-          start_time = time.time()
-          while time.time() - start_time < 30:
-              line = proc.stderr.readline()
-              if line:
-                  print(f"CF LOG: {line.strip()}", flush=True)
-                  if "trycloudflare.com" in line:
-                      match = re.search(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com", line)
-                      if match:
-                          relay_url = match.group(0)
-                          break
-          
-          if not relay_url:
-              print("❌ Cloudflare failed to generate a URL.", flush=True)
-              sys.exit(1)
-          
-          print(f"✅ RELAY LIVE: {relay_url}", flush=True)
-
-          # --- UPDATE GITHUB REGISTRY ---
           api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
-          headers = {
-              "Authorization": f"token {gh_token}",
-              "Accept": "application/vnd.github.v3+json"
-          }
+          headers = {"Authorization": f"token {gh_token}", "Accept": "application/vnd.github.v3+json"}
           
           try:
               curr = requests.get(api_url, headers=headers).json()
@@ -136,6 +100,14 @@ jobs:
               content["last_updated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
               
               requests.put(api_url, headers=headers, json={
-                  "message": "Update Relay URL (Node.js)",
+                  "message": "Update Node.js Relay URL",
                   "content": base64.b64encode(json.dumps(content).encode()).decode(),
-                  "sha": curr["sha
+                  "sha": curr["sha"]
+              })
+          except Exception as e:
+              pass
+
+          time.sleep(19800)
+          requests.post(f"https://api.github.com/repos/{repo}/dispatches", headers=headers, json={"event_type": "handoff"})
+          time.sleep(300)
+          '
