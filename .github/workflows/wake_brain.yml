@@ -1,25 +1,37 @@
 name: Wake Kaggle Brain
+
 on:
-  workflow_dispatch: 
+  workflow_dispatch: # Allows your Node.js server/frontend to trigger this on demand
 
 jobs:
-  deploy-brain:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with: { python-version: '3.10' }
-          
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
       - name: Install Kaggle CLI
         run: pip install kaggle
-        
-      - name: Push AI Brain to Kaggle GPU
+
+      - name: Inject Secrets into brain.py
+        # This securely replaces the os.environ placeholders in your code 
+        # with the actual secrets right before pushing to Kaggle.
+        run: |
+          sed -i 's|os.environ.get("GH_TOKEN")|"${{ secrets.GH_TOKEN }}"|g' brain.py
+          sed -i 's|os.environ.get("KAGGLE_USERNAME")|"${{ secrets.KAGGLE_USERNAME }}"|g' brain.py
+          sed -i 's|os.environ.get("KAGGLE_KEY")|"${{ secrets.KAGGLE_KEY }}"|g' brain.py
+
+      - name: Push to Kaggle
+        # These env vars authenticate the Kaggle CLI runner
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          cd kaggle_brain
-          kaggle kernels push
+          # Push the script and metadata to Kaggle
+          # Note: If your brain.py is inside a folder (like 'kaggle_brain'), change "-p ." to "-p kaggle_brain"
+          kaggle kernels push -p .
