@@ -19,17 +19,23 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          npm install express node-fetch@2 localtunnel
+          npm install express node-fetch@2
           
-          # Start Middleman
+          # Install Cloudflare
+          wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb
+          sudo dpkg -i cloudflared-linux-amd64.deb
+          
+          # Start Node.js Router
           node server.js &
           
-          # Open tunnel for Middleman
-          npx lt --port 8000 > relay_url.txt &
-          sleep 10
-          RELAY_URL=$(cat relay_url.txt | grep -o 'https://[^ ]*')
+          # Open Cloudflare Tunnel
+          cloudflared tunnel --url http://localhost:8000 > tunnel.log 2>&1 &
+          sleep 15
           
-          # Update status.json with the Middleman URL
+          # Extract URL
+          RELAY_URL=$(grep -o 'https://[a-zA-Z0-9-]*\.trycloudflare\.com' tunnel.log | head -n 1)
+          
+          # Update status.json
           python3 -c "
           import requests, json, base64, os
           url = '$RELAY_URL'
@@ -43,16 +49,16 @@ jobs:
           data['relay_url'] = url
           
           requests.put(api_url, headers=headers, json={
-              'message': 'Update Relay URL',
+              'message': 'Update Relay URL (Cloudflare)',
               'content': base64.b64encode(json.dumps(data).encode()).decode(),
               'sha': res['sha']
           })
           "
-          echo "✅ RELAY LIVE: $RELAY_URL"
+          echo "✅ CLOUDFLARE RELAY LIVE: $RELAY_URL"
           
-          # Stay awake for 5.5 hours
+          # Keep alive for 5.5 hours
           sleep 19800 
           
-          # Start the next runner before dying
+          # Handoff to next runner
           curl -X POST https://api.github.com/repos/AADI-playz23/absoracode/dispatches \
           -H "Authorization: token $GH_TOKEN" -d '{"event_type": "handoff"}'
