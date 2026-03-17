@@ -1,0 +1,16 @@
+{
+  "id": "aadiplayz23/absoracode-brain",
+  "title": "AbsoraCode Brain",
+  "code_file": "brain.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": "true",
+  "enable_gpu": "true",
+  "enable_internet": "true",
+  "dataset_sources": [
+    "aadiplayz23/absoracloud-qwen", 
+    "aadiplayz23/absoracloud-deepseek"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}
