@@ -4,20 +4,39 @@ GITHUB_TOKEN = os.environ.get("GH_TOKEN")
 REPO = "AADI-playz23/absoracode"
 
 print("🚀 Waking up AbsoraCloud Dual-Core Engine...")
-os.system("pip install vllm --no-cache-dir")
+
+# ⚡ OFFLINE INSTALLATION (15-second boot from your dataset)
+print("📦 Installing vLLM from local wheels...")
+os.system("pip install --no-index --find-links /kaggle/input/absoracloud-vllm-wheels vllm --no-cache-dir")
+
+# ---------------------------------------------------------
+# 🎯 THE AUTO-PATH FINDER
+# Automatically hunts down the exact folder containing config.json
+# ---------------------------------------------------------
+def find_model_dir(keyword):
+    print(f"🔍 Scanning Kaggle datasets for {keyword}...")
+    for root, dirs, files in os.walk('/kaggle/input'):
+        if 'config.json' in files and keyword.lower() in root.lower():
+            return root
+    return f"/kaggle/input/absoracloud-{keyword}-core" # Fallback
+
+qwen_path = find_model_dir("qwen")
+deepseek_path = find_model_dir("deepseek")
+
+print(f"✅ Qwen locked at: {qwen_path}")
+print(f"✅ DeepSeek locked at: {deepseek_path}")
+# ---------------------------------------------------------
 
 # Boot Qwen on GPU 0
-# ⚠️ Updated path to match the exact Kaggle dataset mount
-print("💻 Loading Qwen Coder from frozen dataset on GPU 0...")
-subprocess.Popen("CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-qwen-core --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8000", shell=True)
+print("💻 Loading Qwen Coder on GPU 0...")
+subprocess.Popen(f"CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model {qwen_path} --gpu-memory-utilization 0.95 --max-model-len 4096 --enforce-eager --port 8000", shell=True)
 
 # Boot DeepSeek on GPU 1
-# ⚠️ Updated path to match the exact Kaggle dataset mount
-print("🧠 Loading DeepSeek R1 from frozen dataset on GPU 1...")
-subprocess.Popen("CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-deepseek-core --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8001", shell=True)
+print("🧠 Loading DeepSeek R1 on GPU 1...")
+subprocess.Popen(f"CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server --model {deepseek_path} --gpu-memory-utilization 0.95 --max-model-len 4096 --enforce-eager --port 8001", shell=True)
 
-# Wait 3 minutes for the massive 14B models to load into VRAM
-time.sleep(180) 
+# Wait 90 seconds for models to load into VRAM
+time.sleep(90) 
 
 print("🚇 Opening Secure Cloudflare Tunnels...")
 os.system("wget -q https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb")
@@ -44,17 +63,18 @@ def get_url(filename):
 qwen_url = get_url("qwen_tunnel.log")
 deep_url = get_url("deepseek_tunnel.log")
 
+api_url = f"https://api.github.com/repos/{REPO}/contents/status.json"
+headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
+
 # Send URLs back to GitHub
 if qwen_url and deep_url:
-    api_url = f"https://api.github.com/repos/{REPO}/contents/status.json"
-    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     try:
         curr = requests.get(api_url, headers=headers).json()
         content = json.loads(base64.b64decode(curr["content"]))
         content.update({"qwen_url": qwen_url, "deepseek_url": deep_url})
         
         requests.put(api_url, headers=headers, json={
-            "message": "Update Kaggle Cloudflare URLs", 
+            "message": "Update Kaggle Cloudflare URLs (Active)", 
             "content": base64.b64encode(json.dumps(content).encode()).decode(), 
             "sha": curr["sha"]
         })
@@ -62,5 +82,25 @@ if qwen_url and deep_url:
     except Exception as e:
         print(f"Registry error: {e}")
 
-# Keep Kaggle running for 12 hours max
-time.sleep(43200)
+# ---------------------------------------------------------
+# 🛡️ MAXIMUM QUOTA SAVER: 30-MINUTE CYCLES
+# Auto-shuts down the Kaggle session after exactly 30 minutes.
+# The frontend "thinking" animation will hide the reboot!
+# ---------------------------------------------------------
+print("⏱️ Quota Saver: Session will auto-terminate in 30 minutes (1800s).")
+time.sleep(1800) 
+
+print("🛑 30 minutes reached. Ghosting the server to save Kaggle GPU quota...")
+
+# Clear the URLs from GitHub so the Node.js router knows it's dead
+try:
+    curr = requests.get(api_url, headers=headers).json()
+    content = json.loads(base64.b64decode(curr["content"]))
+    content.update({"qwen_url": "", "deepseek_url": ""})
+    requests.put(api_url, headers=headers, json={
+        "message": "Auto-Shutdown: Cleared URLs (30-Min Cycle)", 
+        "content": base64.b64encode(json.dumps(content).encode()).decode(), 
+        "sha": curr["sha"]
+    })
+except Exception as e:
+    print(f"Failed to clear registry: {e}")
