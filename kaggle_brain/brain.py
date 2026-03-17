@@ -1,86 +1,47 @@
-import os
-import time
-import json
-from playwright.sync_api import sync_playwright
+import os, subprocess, time, requests, json, base64
 
-PROXY_SERVER = os.environ.get("PROXY_SERVER", "")
-PROXY_USER = os.environ.get("PROXY_USER", "")
-PROXY_PASS = os.environ.get("PROXY_PASS", "")
+GITHUB_TOKEN = os.environ.get("GH_TOKEN")
+REPO = "AADI-playz23/absoracode"
 
-# **IMPORTANT: Put your exact Colab notebook URL here**
-COLAB_URL = "https://colab.research.google.com/drive/1Z2-3rN_7OHlKaoHhoy2tm_9c-WVp-hxB#scrollTo=jig4wwVSTBL4"
+print("🚀 Waking up AbsoraCloud Dual-Core Engine...")
+os.system("pip install vllm --no-cache-dir")
 
-def run_colab():
-    cookie_data = os.environ.get("GOOGLE_COOKIES")
-    if not cookie_data:
-        print("❌ Error: GOOGLE_COOKIES secret not found!")
-        return
+# Boot Qwen on GPU 0
+print("💻 Loading Qwen Coder from frozen dataset on GPU 0...")
+subprocess.Popen("CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-qwen/qwen-coder --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8000", shell=True)
 
-    print("🧩 Parsing and Sanitizing Cookies...")
+# Boot DeepSeek on GPU 1
+print("🧠 Loading DeepSeek R1 from frozen dataset on GPU 1...")
+subprocess.Popen("CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-deepseek/deepseek-r1 --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8001", shell=True)
+
+# Wait for 14B models to load
+time.sleep(180) 
+
+print("🚇 Opening Secure Localtunnels...")
+os.system("npm install -g localtunnel > /dev/null 2>&1")
+proc_qwen = subprocess.Popen(["lt", "--port", "8000"], stdout=subprocess.PIPE, text=True)
+proc_deep = subprocess.Popen(["lt", "--port", "8001"], stdout=subprocess.PIPE, text=True)
+
+qwen_url = proc_qwen.stdout.readline().split("url is:")[-1].strip()
+deep_url = proc_deep.stdout.readline().split("url is:")[-1].strip()
+
+# Send URLs back to GitHub
+if qwen_url and deep_url:
+    api_url = f"https://api.github.com/repos/{REPO}/contents/status.json"
+    headers = {"Authorization": f"token {GITHUB_TOKEN}", "Accept": "application/vnd.github.v3+json"}
     try:
-        parsed_cookies = json.loads(cookie_data)
-        cookie_list = parsed_cookies if isinstance(parsed_cookies, list) else parsed_cookies.get("cookies", [])
+        curr = requests.get(api_url, headers=headers).json()
+        content = json.loads(base64.b64decode(curr["content"]))
+        content.update({"qwen_url": qwen_url, "deepseek_url": deep_url})
         
-        # --- CLEAN UP WEIRD COOKIE FORMATS ---
-        for c in cookie_list:
-            if "sameSite" in c:
-                val = str(c["sameSite"]).lower()
-                if val in ["no_restriction", "none", "null", "unspecified"]:
-                    c["sameSite"] = "None"
-                elif val == "lax":
-                    c["sameSite"] = "Lax"
-                elif val == "strict":
-                    c["sameSite"] = "Strict"
-                else:
-                    del c["sameSite"] # Delete invalid keys so they don't crash Playwright
-
-        final_json = {"cookies": cookie_list}
-        with open("google_auth.json", "w") as f:
-            json.dump(final_json, f, indent=2)
-            
+        requests.put(api_url, headers=headers, json={
+            "message": "Update Kaggle URLs", 
+            "content": base64.b64encode(json.dumps(content).encode()).decode(), 
+            "sha": curr["sha"]
+        })
+        print(f"✅ URLs registered! Qwen: {qwen_url} | DeepSeek: {deep_url}")
     except Exception as e:
-        print(f"❌ CRITICAL JSON ERROR: {e}")
-        return
+        print(f"Registry error: {e}")
 
-    print("🚀 Booting Stealth Browser...")
-    
-    proxy_settings = {
-        "server": PROXY_SERVER,
-        "username": PROXY_USER,
-        "password": PROXY_PASS
-    } if PROXY_SERVER.startswith("http") else None
-
-    if not proxy_settings:
-        print("⚠️ No proxy detected. Running directly from GitHub IP.")
-
-    with sync_playwright() as p:
-        browser = p.chromium.launch(
-            headless=True,
-            args=["--disable-blink-features=AutomationControlled"],
-            proxy=proxy_settings
-        )
-        
-        context = browser.new_context(
-            storage_state="google_auth.json",
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
-        page = context.new_page()
-
-        print(f"🌐 Navigating to Colab...")
-        page.goto(COLAB_URL)
-        
-        # Increased wait time for Google's UI to load fully
-        time.sleep(20) 
-
-        print("⚡ Triggering Run All (Ctrl+F9)...")
-        page.keyboard.press("Control+F9")
-        time.sleep(10) 
-        
-        print("✅ Colab is waking up. Shutting down stealth browser.")
-        browser.close()
-
-    if os.path.exists("google_auth.json"):
-        os.remove("google_auth.json")
-
-if __name__ == "__main__":
-    run_colab()
+# Keep Kaggle running for 12 hours
+time.sleep(43200)
