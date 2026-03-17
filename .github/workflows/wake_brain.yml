@@ -1,7 +1,7 @@
 name: Wake Kaggle Brain
 
 on:
-  workflow_dispatch: # Allows your Node.js server/frontend to trigger this on demand
+  workflow_dispatch: # Allows manual triggering or API triggering
 
 jobs:
   deploy:
@@ -18,17 +18,10 @@ jobs:
       - name: Install Kaggle CLI
         run: pip install kaggle
 
-      - name: Inject GitHub Token into brain.py
-        # Securely injects the GH_TOKEN so brain.py can update status.json
-        run: |
-          sed -i 's|os.environ.get("GH_TOKEN")|"${{ secrets.GH_TOKEN }}"|g' brain.py
-
       - name: Push to Kaggle
-        # The Kaggle CLI requires these secrets to authenticate the push itself
         env:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
-          # This command looks for brain.py and kernel-metadata.json in the current folder.
-          # (If your files are inside a specific folder like 'kaggle_brain', change '.' to 'kaggle_brain')
+          # If your files are in a specific folder, change '.' to the folder name, e.g., 'kaggle_brain'
           kaggle kernels push -p .
