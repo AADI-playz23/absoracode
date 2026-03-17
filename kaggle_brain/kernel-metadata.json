@@ -8,8 +8,9 @@
   "enable_gpu": "true",
   "enable_internet": "true",
   "dataset_sources": [
-    "aadiplayz23/absoracloud-qwen", 
-    "aadiplayz23/absoracloud-deepseek"
+    "aadiplayz23/absoracloud-vllm-wheels",
+    "aadiplayz23/absoracloud-qwen-core", 
+    "aadiplayz23/absoracloud-deepseek-core"
   ],
   "competition_sources": [],
   "kernel_sources": []
