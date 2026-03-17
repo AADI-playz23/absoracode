@@ -5,9 +5,28 @@ REPO = "AADI-playz23/absoracode"
 
 print("🚀 Waking up AbsoraCloud Dual-Core Engine...")
 
-# ⚡ OFFLINE INSTALLATION (15-second boot from your dataset)
-print("📦 Installing vLLM from local wheels...")
-os.system("pip install --no-index --find-links /kaggle/input/absoracloud-vllm-wheels vllm --no-cache-dir")
+# ---------------------------------------------------------
+# ⚡ STRICT OFFLINE vLLM INSTALLATION
+# No internet fallback. Only the mounted Kaggle dataset.
+# ---------------------------------------------------------
+print("📦 Hunting for vLLM dataset in the Kaggle Input tab...")
+wheels_path = None
+
+for root, dirs, files in os.walk('/kaggle/input'):
+    if any(f.endswith('.whl') and 'vllm' in f.lower() for f in files):
+        wheels_path = root
+        break
+
+if wheels_path:
+    print(f"✅ Found vLLM wheels at {wheels_path}! Running ultra-fast install...")
+    status = os.system(f"pip install --no-index --find-links {wheels_path} vllm --no-cache-dir")
+    if status != 0:
+        print("❌ ERROR: pip failed to install from the wheels.")
+        exit(1)
+else:
+    print("❌ FATAL ERROR: vLLM dataset is NOT in the Input tab!")
+    print("Please check your kernel-metadata.json 'dataset_sources' array.")
+    exit(1) # Kill the script immediately
 
 # ---------------------------------------------------------
 # 🎯 THE AUTO-PATH FINDER
@@ -18,7 +37,8 @@ def find_model_dir(keyword):
     for root, dirs, files in os.walk('/kaggle/input'):
         if 'config.json' in files and keyword.lower() in root.lower():
             return root
-    return f"/kaggle/input/absoracloud-{keyword}-core" # Fallback
+    print(f"❌ FATAL ERROR: Could not find {keyword} dataset in Input tab!")
+    exit(1)
 
 qwen_path = find_model_dir("qwen")
 deepseek_path = find_model_dir("deepseek")
@@ -74,7 +94,7 @@ if qwen_url and deep_url:
         content.update({"qwen_url": qwen_url, "deepseek_url": deep_url})
         
         requests.put(api_url, headers=headers, json={
-            "message": "Update Kaggle Cloudflare URLs (Active)", 
+            "message": "Update Kaggle Cloudflare URLs (Strict Offline)", 
             "content": base64.b64encode(json.dumps(content).encode()).decode(), 
             "sha": curr["sha"]
         })
@@ -85,22 +105,21 @@ if qwen_url and deep_url:
 # ---------------------------------------------------------
 # 🛡️ MAXIMUM QUOTA SAVER: 30-MINUTE CYCLES
 # Auto-shuts down the Kaggle session after exactly 30 minutes.
-# The frontend "thinking" animation will hide the reboot!
 # ---------------------------------------------------------
 print("⏱️ Quota Saver: Session will auto-terminate in 30 minutes (1800s).")
 time.sleep(1800) 
 
 print("🛑 30 minutes reached. Ghosting the server to save Kaggle GPU quota...")
 
-# Clear the URLs from GitHub so the Node.js router knows it's dead
+# Clear the URLs from GitHub
 try:
     curr = requests.get(api_url, headers=headers).json()
     content = json.loads(base64.b64decode(curr["content"]))
     content.update({"qwen_url": "", "deepseek_url": ""})
     requests.put(api_url, headers=headers, json={
-        "message": "Auto-Shutdown: Cleared URLs (30-Min Cycle)", 
+        "message": "Auto-Shutdown: Cleared URLs", 
         "content": base64.b64encode(json.dumps(content).encode()).decode(), 
         "sha": curr["sha"]
     })
 except Exception as e:
-    print(f"Failed to clear registry: {e}")
+    pass
