@@ -8,8 +8,8 @@
   "enable_gpu": "true",
   "enable_internet": "true",
   "dataset_sources": [
-    "YOUR_EXACT_USERNAME/absoracloud-qwen", 
-    "YOUR_EXACT_USERNAME/absoracloud-deepseek"
+    "aadiplayz23/absoracloud-qwen-core", 
+    "aadiplayz23/absoracloud-deepseek-core"
   ],
   "competition_sources": [],
   "kernel_sources": []
