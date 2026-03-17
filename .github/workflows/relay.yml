@@ -1,116 +1,58 @@
-name: Nexus Relay (Node.js Infinite Loop)
-
+name: AbsoraCloud Relay
 on:
   workflow_dispatch:
   repository_dispatch:
     types: [handoff]
 
 jobs:
-  relay:
+  run-relay:
     runs-on: ubuntu-latest
-    timeout-minutes: 355 # ~6 hours max
     permissions:
       contents: write
-      
+      actions: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: '20' }
-      - uses: actions/setup-python@v4
-        with: { python-version: '3.10' }
-        
-      - name: Install Dependencies
-        run: |
-          npm install express cors node-fetch@2
-          pip install requests
-
-      - name: Create & Start Node.js Proxy
-        env:
-          REPO: ${{ github.repository }}
-        run: |
-          cat << 'EOF' > server.js
-          const express = require('express');
-          const cors = require('cors');
-          const fetch = require('node-fetch');
-          
-          const app = express();
-          app.use(cors());
-          app.use(express.json());
-
-          const REPO = process.env.REPO;
-
-          app.post(['/v1/chat/completions', '/api/chat'], async (req, res) => {
-              try {
-                  const statusUrl = `https://raw.githubusercontent.com/${REPO}/main/status.json?t=${Date.now()}`;
-                  const statusRes = await fetch(statusUrl);
-                  const statusData = await statusRes.json();
-                  const brainUrl = statusData.brain_url;
-
-                  if (!brainUrl) throw new Error("Colab Brain URL is missing!");
-
-                  console.log(`📡 Forwarding to Colab: ${brainUrl}`);
-
-                  const response = await fetch(`${brainUrl}/api/chat`, {
-                      method: 'POST',
-                      headers: {
-                          'Content-Type': 'application/json',
-                          'Bypass-Tunnel-Reminder': 'true' 
-                      },
-                      body: JSON.stringify(req.body)
-                  });
-
-                  const data = await response.json();
-                  res.json(data);
-
-              } catch (error) {
-                  res.status(500).json({ error: "Node Relay failed to reach Colab", details: error.message });
-              }
-          });
-
-          app.listen(8000, () => console.log('🚀 Node.js Relay running on port 8000'));
-          EOF
-          node server.js &
-
-      - name: Start Tunnel & Update GitHub
+      
+      - name: Start Relay & Tunnel
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          REPO: ${{ github.repository }}
         run: |
-          python -c '
-          import os, time, requests, json, base64, subprocess, sys
-          repo = os.environ.get("REPO")
-          gh_token = os.environ.get("GH_TOKEN")
-
-          os.system("npm install -g localtunnel")
-          proc = subprocess.Popen(["lt", "--port", "8000"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-
-          relay_url = None
-          for _ in range(30):
-              line = proc.stdout.readline()
-              if "url is" in line:
-                  relay_url = line.split("url is:")[-1].strip()
-                  break
-              time.sleep(1)
+          npm install express node-fetch@2 localtunnel
           
-          api_url = f"https://api.github.com/repos/{repo}/contents/status.json"
-          headers = {"Authorization": f"token {gh_token}", "Accept": "application/vnd.github.v3+json"}
+          # Start Middleman
+          node server.js &
           
-          try:
-              curr = requests.get(api_url, headers=headers).json()
-              content = json.loads(base64.b64decode(curr["content"]))
-              content["relay_url"] = relay_url
-              content["last_updated"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
-              
-              requests.put(api_url, headers=headers, json={
-                  "message": "Update Node.js Relay URL",
-                  "content": base64.b64encode(json.dumps(content).encode()).decode(),
-                  "sha": curr["sha"]
-              })
-              print("🎉 GitHub Updated with Relay URL!", flush=True)
-          except Exception as e:
-              print(f"❌ Failed to update registry: {e}", flush=True)
-
-          time.sleep(19800)
-          requests.post(f"https://api.github.com/repos/{repo}/dispatches", headers=headers, json={"event_type": "handoff"})
-          time.sleep(300)
-          '
+          # Open tunnel for Middleman
+          npx lt --port 8000 > relay_url.txt &
+          sleep 10
+          RELAY_URL=$(cat relay_url.txt | grep -o 'https://[^ ]*')
+          
+          # Update status.json with the Middleman URL
+          python3 -c "
+          import requests, json, base64, os
+          url = '$RELAY_URL'
+          token = os.environ.get('GH_TOKEN')
+          repo = 'AADI-playz23/absoracode'
+          api_url = f'https://api.github.com/repos/{repo}/contents/status.json'
+          headers = {'Authorization': f'token {token}'}
+          
+          res = requests.get(api_url, headers=headers).json()
+          data = json.loads(base64.b64decode(res['content']))
+          data['relay_url'] = url
+          
+          requests.put(api_url, headers=headers, json={
+              'message': 'Update Relay URL',
+              'content': base64.b64encode(json.dumps(data).encode()).decode(),
+              'sha': res['sha']
+          })
+          "
+          echo "✅ RELAY LIVE: $RELAY_URL"
+          
+          # Stay awake for 5.5 hours
+          sleep 19800 
+          
+          # Start the next runner before dying
+          curl -X POST https://api.github.com/repos/AADI-playz23/absoracode/dispatches \
+          -H "Authorization: token $GH_TOKEN" -d '{"event_type": "handoff"}'
