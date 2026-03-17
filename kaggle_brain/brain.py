@@ -7,12 +7,14 @@ print("🚀 Waking up AbsoraCloud Dual-Core Engine...")
 os.system("pip install vllm --no-cache-dir")
 
 # Boot Qwen on GPU 0
+# ⚠️ Updated path to match the exact Kaggle dataset mount
 print("💻 Loading Qwen Coder from frozen dataset on GPU 0...")
-subprocess.Popen("CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-qwen/qwen-coder --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8000", shell=True)
+subprocess.Popen("CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-qwen-core --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8000", shell=True)
 
 # Boot DeepSeek on GPU 1
+# ⚠️ Updated path to match the exact Kaggle dataset mount
 print("🧠 Loading DeepSeek R1 from frozen dataset on GPU 1...")
-subprocess.Popen("CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-deepseek/deepseek-r1 --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8001", shell=True)
+subprocess.Popen("CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server --model /kaggle/input/absoracloud-deepseek-core --gpu-memory-utilization 0.95 --max-model-len 4096 --port 8001", shell=True)
 
 # Wait 3 minutes for the massive 14B models to load into VRAM
 time.sleep(180) 
