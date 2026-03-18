@@ -23,5 +23,5 @@ jobs:
           KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
           KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
         run: |
-          # If your files are in a specific folder, change '.' to the folder name, e.g., 'kaggle_brain'
-          kaggle kernels push -p .
+          # Now it correctly targets the folder where your JSON and PY files live!
+          kaggle kernels push -p kaggle_brain
