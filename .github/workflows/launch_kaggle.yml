@@ -1,0 +1,85 @@
+# .github/workflows/launch_kaggle.yml
+# Selenium bot: logs into Kaggle, creates kernel, enables GPU, runs it
+#
+# GitHub Secrets needed:
+#   BOT_KAGGLE_EMAIL      – bot Kaggle account email
+#   BOT_KAGGLE_PASSWORD   – bot Kaggle account password
+#   BOT_KAGGLE_USERNAME   – bot Kaggle username (for API)
+#   BOT_KAGGLE_KEY        – bot Kaggle API key
+
+name: Launch Kaggle GPU (Selenium Bot)
+
+on:
+  workflow_dispatch:
+    inputs:
+      instance_id:
+        description: "Platform instance ID"
+        required: true
+      gpu_type:
+        description: "T4 or P100"
+        required: true
+        default: "T4"
+      user_api_key:
+        description: "User API key for callbacks"
+        required: true
+      plugin_cmds:
+        description: "Plugin install commands"
+        required: false
+        default: ""
+      callback_url:
+        description: "Platform callback URL"
+        required: true
+
+jobs:
+  selenium-kaggle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Chrome + deps
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
+            | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable xvfb
+          pip install selenium webdriver-manager requests kaggle
+
+      - name: Setup Kaggle credentials
+        env:
+          BOT_KAGGLE_USERNAME: ${{ secrets.BOT_KAGGLE_USERNAME }}
+          BOT_KAGGLE_KEY:      ${{ secrets.BOT_KAGGLE_KEY }}
+        run: |
+          mkdir -p ~/.kaggle
+          echo "{\"username\":\"$BOT_KAGGLE_USERNAME\",\"key\":\"$BOT_KAGGLE_KEY\"}" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
+
+      - name: Notify platform – starting
+        run: |
+          curl -s -X POST "${{ github.event.inputs.callback_url }}" \
+            -H "Content-Type: application/json" \
+            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"log","level":"info","message":"Runner started. Launching Kaggle bot..."}'
+
+      - name: Run Selenium Kaggle Bot
+        env:
+          INSTANCE_ID:          ${{ github.event.inputs.instance_id }}
+          GPU_TYPE:             ${{ github.event.inputs.gpu_type }}
+          USER_API_KEY:         ${{ github.event.inputs.user_api_key }}
+          PLUGIN_CMDS:          ${{ github.event.inputs.plugin_cmds }}
+          CALLBACK_URL:         ${{ github.event.inputs.callback_url }}
+          BOT_KAGGLE_EMAIL:     ${{ secrets.BOT_KAGGLE_EMAIL }}
+          BOT_KAGGLE_PASSWORD:  ${{ secrets.BOT_KAGGLE_PASSWORD }}
+          BOT_KAGGLE_USERNAME:  ${{ secrets.BOT_KAGGLE_USERNAME }}
+        run: python scripts/selenium_kaggle.py
+
+      - name: Report failure
+        if: failure()
+        run: |
+          curl -s -X POST "${{ github.event.inputs.callback_url }}" \
+            -H "Content-Type: application/json" \
+            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"status","status":"failed"}'

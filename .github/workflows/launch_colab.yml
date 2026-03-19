@@ -1,0 +1,73 @@
+# .github/workflows/launch_colab.yml
+# Selenium bot: logs into Google, opens Colab, connects GPU runtime, runs notebook
+#
+# GitHub Secrets needed:
+#   BOT_GOOGLE_EMAIL      – bot Google account email
+#   BOT_GOOGLE_PASSWORD   – bot Google account password
+
+name: Launch Colab GPU (Selenium Bot)
+
+on:
+  workflow_dispatch:
+    inputs:
+      instance_id:
+        description: "Platform instance ID"
+        required: true
+      gpu_type:
+        description: "T4 or P100"
+        required: true
+        default: "T4"
+      user_api_key:
+        description: "User API key for callbacks"
+        required: true
+      plugin_cmds:
+        description: "Plugin install commands"
+        required: false
+        default: ""
+      callback_url:
+        description: "Platform callback URL"
+        required: true
+
+jobs:
+  selenium-colab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Chrome + Xvfb
+        run: |
+          wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+          echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" \
+            | sudo tee /etc/apt/sources.list.d/google-chrome.list
+          sudo apt-get update -q
+          sudo apt-get install -y google-chrome-stable xvfb
+          pip install selenium webdriver-manager requests
+
+      - name: Notify platform – starting
+        run: |
+          curl -s -X POST "${{ github.event.inputs.callback_url }}" \
+            -H "Content-Type: application/json" \
+            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"log","level":"info","message":"Runner started. Launching Selenium + Chrome..."}'
+
+      - name: Run Selenium Colab Bot
+        env:
+          INSTANCE_ID:         ${{ github.event.inputs.instance_id }}
+          GPU_TYPE:            ${{ github.event.inputs.gpu_type }}
+          USER_API_KEY:        ${{ github.event.inputs.user_api_key }}
+          PLUGIN_CMDS:         ${{ github.event.inputs.plugin_cmds }}
+          CALLBACK_URL:        ${{ github.event.inputs.callback_url }}
+          BOT_GOOGLE_EMAIL:    ${{ secrets.BOT_GOOGLE_EMAIL }}
+          BOT_GOOGLE_PASSWORD: ${{ secrets.BOT_GOOGLE_PASSWORD }}
+        run: python scripts/selenium_colab.py
+
+      - name: Report failure
+        if: failure()
+        run: |
+          curl -s -X POST "${{ github.event.inputs.callback_url }}" \
+            -H "Content-Type: application/json" \
+            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"status","status":"failed"}'
