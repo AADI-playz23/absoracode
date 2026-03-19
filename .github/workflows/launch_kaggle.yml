@@ -1,13 +1,16 @@
 # .github/workflows/launch_kaggle.yml
-# Selenium bot: logs into Kaggle, creates kernel, enables GPU, runs it
 #
-# GitHub Secrets needed:
-#   BOT_KAGGLE_EMAIL      – bot Kaggle account email
-#   BOT_KAGGLE_PASSWORD   – bot Kaggle account password
-#   BOT_KAGGLE_USERNAME   – bot Kaggle username (for API)
-#   BOT_KAGGLE_KEY        – bot Kaggle API key
+# Since the bot Kaggle account was created with "Continue with Google",
+# Selenium signs into Kaggle by clicking "Sign in with Google" and
+# completing the Google OAuth flow.
+#
+# Required GitHub Secrets:
+#   BOT_GOOGLE_EMAIL      – bot Google account email (same as Colab)
+#   BOT_GOOGLE_PASSWORD   – bot Google account password (same as Colab)
+#   BOT_KAGGLE_USERNAME   – bot Kaggle username  (from kaggle.com/settings)
+#   BOT_KAGGLE_KEY        – bot Kaggle API key   (from kaggle.com/settings)
 
-name: Launch Kaggle GPU (Selenium Bot)
+name: Launch Kaggle GPU (Selenium + Google OAuth)
 
 on:
   workflow_dispatch:
@@ -50,20 +53,11 @@ jobs:
           sudo apt-get install -y google-chrome-stable xvfb
           pip install selenium webdriver-manager requests kaggle
 
-      - name: Setup Kaggle credentials
-        env:
-          BOT_KAGGLE_USERNAME: ${{ secrets.BOT_KAGGLE_USERNAME }}
-          BOT_KAGGLE_KEY:      ${{ secrets.BOT_KAGGLE_KEY }}
-        run: |
-          mkdir -p ~/.kaggle
-          echo "{\"username\":\"$BOT_KAGGLE_USERNAME\",\"key\":\"$BOT_KAGGLE_KEY\"}" > ~/.kaggle/kaggle.json
-          chmod 600 ~/.kaggle/kaggle.json
-
-      - name: Notify platform – starting
+      - name: Notify platform starting
         run: |
           curl -s -X POST "${{ github.event.inputs.callback_url }}" \
             -H "Content-Type: application/json" \
-            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"log","level":"info","message":"Runner started. Launching Kaggle bot..."}'
+            -d '{"api_key":"${{ github.event.inputs.user_api_key }}","instance_id":${{ github.event.inputs.instance_id }},"action":"log","level":"info","message":"Runner started. Pushing kernel + opening Kaggle via Google OAuth..."}'
 
       - name: Run Selenium Kaggle Bot
         env:
@@ -72,9 +66,10 @@ jobs:
           USER_API_KEY:         ${{ github.event.inputs.user_api_key }}
           PLUGIN_CMDS:          ${{ github.event.inputs.plugin_cmds }}
           CALLBACK_URL:         ${{ github.event.inputs.callback_url }}
-          BOT_KAGGLE_EMAIL:     ${{ secrets.BOT_KAGGLE_EMAIL }}
-          BOT_KAGGLE_PASSWORD:  ${{ secrets.BOT_KAGGLE_PASSWORD }}
+          BOT_GOOGLE_EMAIL:     ${{ secrets.BOT_GOOGLE_EMAIL }}
+          BOT_GOOGLE_PASSWORD:  ${{ secrets.BOT_GOOGLE_PASSWORD }}
           BOT_KAGGLE_USERNAME:  ${{ secrets.BOT_KAGGLE_USERNAME }}
+          BOT_KAGGLE_KEY:       ${{ secrets.BOT_KAGGLE_KEY }}
         run: python scripts/selenium_kaggle.py
 
       - name: Report failure
