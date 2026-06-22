@@ -1,14 +1,6 @@
 {
-  "version": 2,
   "framework": "nextjs",
   "buildCommand": "next build",
   "devCommand": "next dev",
-  "installCommand": "npm install",
-  "env": {
-    "CF_ACCOUNT_ID": "@cf_account_id",
-    "CF_D1_DATABASE_ID": "@cf_d1_database_id",
-    "CF_API_TOKEN": "@cf_api_token",
-    "GEMINI_API_KEY": "@gemini_api_key",
-    "JWT_SECRET": "@jwt_secret"
-  }
+  "installCommand": "npm install"
 }
