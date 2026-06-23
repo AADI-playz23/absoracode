@@ -8,6 +8,8 @@ export const metadata: Metadata = {
 };
 
 const LANG_META: Record<string, { icon: string; color: string; desc: string }> = {
+  'lang-html-css':   { icon: '🎨', color: 'from-orange-500 to-pink-500',  desc: 'Style the web with HTML structure and CSS design' },
+  'lang-javascript': { icon: '⚡', color: 'from-yellow-400 to-amber-500', desc: 'The language of the web — interactive and powerful' },
   'lang-python':     { icon: '🐍', color: 'from-blue-500 to-cyan-500',    desc: 'Clean, readable syntax loved by beginners and pros' },
   'lang-cpp':        { icon: '⚙️', color: 'from-blue-600 to-indigo-600',   desc: 'High performance systems language for speed and control' },
   'lang-java':       { icon: '☕', color: 'from-red-500 to-orange-500',   desc: 'Enterprise-grade object-oriented programming language' },
