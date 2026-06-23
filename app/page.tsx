@@ -30,9 +30,12 @@ const features = [
 ];
 
 const builtinLanguages = [
-  { name: 'HTML & CSS', icon: '🎨', color: 'from-orange-500 to-pink-500',   id: 'lang-html-css'  },
-  { name: 'JavaScript', icon: '⚡', color: 'from-yellow-400 to-amber-500',  id: 'lang-javascript' },
   { name: 'Python',     icon: '🐍', color: 'from-blue-500 to-cyan-500',     id: 'lang-python'    },
+  { name: 'C++',        icon: '⚙️', color: 'from-blue-600 to-indigo-600',   id: 'lang-cpp'       },
+  { name: 'Java',       icon: '☕', color: 'from-red-500 to-orange-500',    id: 'lang-java'      },
+  { name: 'Rust',       icon: '🦀', color: 'from-amber-600 to-red-700',    id: 'lang-rust'      },
+  { name: 'Golang',     icon: '🐹', color: 'from-cyan-400 to-blue-500',    id: 'lang-golang'    },
+  { name: 'JumboLang',  icon: '🐘', color: 'from-purple-500 to-indigo-500', id: 'lang-jumbolang' },
 ];
 
 export default function HomePage() {
@@ -82,7 +85,7 @@ export default function HomePage() {
         <h2 className="text-center text-sm font-semibold text-white/40 uppercase tracking-widest mb-8">
           Start with a built-in language
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-4xl mx-auto">
           {builtinLanguages.map((lang) => (
             <Link
               key={lang.id}
