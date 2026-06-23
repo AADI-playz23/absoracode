@@ -1,0 +1,1652 @@
+[
+  {
+    "id": "cpp-001",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 1?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-002",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 2?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-003",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 3?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-004",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 4?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-005",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 5?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-006",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 6?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-007",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 7?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-008",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 8?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-009",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 9?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-010",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 10?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-011",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 11?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-012",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 12?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-013",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 13?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-014",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 14?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-015",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 15?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-016",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 16?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-017",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 17?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-018",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 18?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-019",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 19?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-020",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 20?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-021",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 21?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-022",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 22?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-023",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 23?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-024",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 24?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-025",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 25?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-026",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 26?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-027",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 27?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-028",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 28?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-029",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 29?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-030",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 30?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-031",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 31?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-032",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 32?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-033",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 33?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-034",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 34?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-035",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 35?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-036",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 36?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-037",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 37?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-038",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 38?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-039",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 39?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-040",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 40?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-041",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 41?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-042",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 42?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-043",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 43?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-044",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 44?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-045",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 45?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-046",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 46?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-047",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 47?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-048",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 48?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-049",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 49?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-050",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Under the C++ track, what is a fundamental rule regarding variables, keywords, or structure for question 50?",
+    "options": [
+      "It must be declared",
+      "It is dynamically typed",
+      "It requires indentation",
+      "It uses semicolons"
+    ],
+    "correct_answer": "It must be declared",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "cpp-051",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-052",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-053",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-054",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-055",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-056",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-057",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-058",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-059",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-060",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-061",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-062",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-063",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-064",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-065",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-066",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-067",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-068",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-069",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-070",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-071",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-072",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-073",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-074",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-075",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-076",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-077",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-078",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-079",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-080",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-081",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-082",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-083",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-084",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-085",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-086",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-087",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-088",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-089",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-090",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-091",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-092",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-093",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-094",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-095",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-096",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-097",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-098",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-099",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  },
+  {
+    "id": "cpp-100",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a C++ program or function that takes a number 'n' and returns its square (n * n). Ensure your code is clean and handles basic edge cases.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "int getSquare(int n) {\n    // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          5
+        ],
+        "expected": 25,
+        "description": "get_square(5) should return 25"
+      }
+    ]
+  }
+]
