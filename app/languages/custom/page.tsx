@@ -16,8 +16,37 @@ export default function CustomLanguagePage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!name.trim()) return;
+    const trimmed = name.trim();
+    if (!trimmed) return;
     setError('');
+
+    const inputName = trimmed.toLowerCase();
+    const BUILTIN_NAMES_MAP: Record<string, string> = {
+      'python': 'lang-python',
+      'cpp': 'lang-cpp',
+      'c++': 'lang-cpp',
+      'java': 'lang-java',
+      'rust': 'lang-rust',
+      'golang': 'lang-golang',
+      'go': 'lang-golang',
+      'jumbolang': 'lang-jumbolang',
+      'html & css': 'lang-html-css',
+      'html/css': 'lang-html-css',
+      'html css': 'lang-html-css',
+      'html': 'lang-html-css',
+      'css': 'lang-html-css',
+      'html and css': 'lang-html-css',
+      'javascript': 'lang-javascript',
+      'js': 'lang-javascript',
+      'vanilla js': 'lang-javascript',
+      'vanilla javascript': 'lang-javascript',
+    };
+
+    if (BUILTIN_NAMES_MAP[inputName]) {
+      router.push(`/problem/${BUILTIN_NAMES_MAP[inputName]}`);
+      return;
+    }
+
     loading && setLoading(false); // safety check reset
     setLoading(true);
     setStep('generating');
