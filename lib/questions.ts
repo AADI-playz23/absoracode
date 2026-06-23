@@ -6,6 +6,8 @@ const QUESTIONS_BASE_URL =
   'https://raw.githubusercontent.com/AADI-playz23/absoracode/main/questions/';
 
 const ID_TO_FILE: Record<string, string> = {
+  'lang-html-css':   'html-css.json',
+  'lang-javascript': 'javascript.json',
   'lang-python':     'python.json',
   'lang-cpp':        'cpp.json',
   'lang-java':       'java.json',
