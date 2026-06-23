@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { query } from '@/lib/d1';
 import { getSessionUser } from '@/lib/auth';
+import { ensureQuestionsSeeded } from '@/lib/questions';
 import type { Problem } from '@/lib/types';
 
 // GET /api/problem-next?languageId=xxx&index=0
@@ -16,6 +17,9 @@ export async function GET(request: NextRequest) {
     if (!languageId) {
       return NextResponse.json({ error: 'languageId is required' }, { status: 400 });
     }
+
+    // Dynamic fetch and seed questions from GitHub if not already seeded
+    await ensureQuestionsSeeded(languageId);
 
     // Get all problem IDs the user has already submitted for this language
     const submitted = await query<{ problem_id: string }>(
