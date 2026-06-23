@@ -13,7 +13,7 @@ export async function POST(request: NextRequest) {
     const user = await getSessionUser(request);
     if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
-    const { languageId, batchNumber } = await request.json();
+    const { languageId, batchNumber, context } = await request.json();
 
     if (!languageId || typeof batchNumber !== 'number') {
       return NextResponse.json({ error: 'languageId and batchNumber are required' }, { status: 400 });
@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Language not found' }, { status: 404 });
     }
 
-    const questions = await generateBatch(langs[0].name, batchNumber);
+    const questions = await generateBatch(langs[0].name, batchNumber, context);
 
     const id = uuid();
     await execute(
