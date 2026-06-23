@@ -9,6 +9,7 @@ const SUGGESTIONS = ['Rust', 'Go', 'Swift', 'TypeScript', 'Kotlin', 'Ruby', 'C++
 export default function CustomLanguagePage() {
   const router  = useRouter();
   const [name,    setName]    = useState('');
+  const [context, setContext] = useState('');
   const [loading, setLoading] = useState(false);
   const [error,   setError]   = useState('');
   const [step,    setStep]    = useState<'input' | 'generating'>('input');
@@ -17,6 +18,7 @@ export default function CustomLanguagePage() {
     e.preventDefault();
     if (!name.trim()) return;
     setError('');
+    loading && setLoading(false); // safety check reset
     setLoading(true);
     setStep('generating');
 
@@ -36,7 +38,7 @@ export default function CustomLanguagePage() {
       const batchRes  = await fetch('/api/generate-batch', {
         method:  'POST',
         headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ languageId, batchNumber: 1 }),
+        body:    JSON.stringify({ languageId, batchNumber: 1, context: context.trim() }),
       });
       const batchData = await batchRes.json();
       if (!batchRes.ok) { setError(batchData.error ?? 'Failed to generate questions'); setStep('input'); return; }
@@ -100,6 +102,24 @@ export default function CustomLanguagePage() {
                     </button>
                   ))}
                 </div>
+              </div>
+
+              {/* Context textarea */}
+              <div className="flex flex-col gap-1.5">
+                <label htmlFor="custom-language-context" className="text-sm font-medium text-white/70">
+                  Language Context / Documentation (Optional)
+                </label>
+                <textarea
+                  id="custom-language-context"
+                  rows={4}
+                  placeholder="Paste rules, syntax, or descriptions of the language to guide the AI questions..."
+                  value={context}
+                  onChange={(e) => setContext(e.target.value)}
+                  className="w-full rounded-xl border bg-surface-700/60 px-4 py-3 text-white
+                             placeholder-white/30 outline-none transition-all duration-200
+                             focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20
+                             border-white/10 hover:border-white/20 resize-y min-h-[100px]"
+                />
               </div>
 
               {error && (
