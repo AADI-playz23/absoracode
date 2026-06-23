@@ -65,11 +65,13 @@ function validateQuestion(q: unknown): q is GeneratedQuestion {
 export async function generateBatch(
   languageName: string,
   batchNumber: number,
+  context?: string,
 ): Promise<GeneratedQuestion[]> {
   const prompt = `
 You are an expert programming tutor creating beginner-friendly exercises.
 Generate exactly 10 programming questions for the language: "${languageName}".
 This is batch #${batchNumber} — vary difficulty and question types.
+${context ? `\nHere is documentation, rules, or syntax context for this custom language:\n"""\n${context}\n"""\nMake sure the generated questions conform to these specifications.\n` : ''}
 
 Return ONLY a valid JSON array with exactly 10 objects. No explanation, no markdown, just the JSON array.
 
