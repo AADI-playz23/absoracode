@@ -1,0 +1,1802 @@
+[
+  {
+    "id": "html-001",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines the largest heading?",
+    "options": [
+      "<h1>",
+      "<h1s>",
+      "<section>",
+      "<tag3>"
+    ],
+    "correct_answer": "<h1>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-002",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a paragraph?",
+    "options": [
+      "<h2>",
+      "<p>",
+      "<ps>",
+      "<section>"
+    ],
+    "correct_answer": "<p>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-003",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a hyperlink?",
+    "options": [
+      "<a>",
+      "<as>",
+      "<h3>",
+      "<section>"
+    ],
+    "correct_answer": "<a>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-004",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an image?",
+    "options": [
+      "<h4>",
+      "<img>",
+      "<imgs>",
+      "<section>"
+    ],
+    "correct_answer": "<img>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-005",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to inserts a single line break?",
+    "options": [
+      "<br>",
+      "<brs>",
+      "<h5>",
+      "<section>"
+    ],
+    "correct_answer": "<br>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-006",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an unordered list?",
+    "options": [
+      "<h6>",
+      "<section>",
+      "<ul>",
+      "<uls>"
+    ],
+    "correct_answer": "<ul>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-007",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an ordered list?",
+    "options": [
+      "<h7>",
+      "<ol>",
+      "<ols>",
+      "<section>"
+    ],
+    "correct_answer": "<ol>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-008",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a list item?",
+    "options": [
+      "<h8>",
+      "<li>",
+      "<lis>",
+      "<section>"
+    ],
+    "correct_answer": "<li>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-009",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a table?",
+    "options": [
+      "<h9>",
+      "<section>",
+      "<table>",
+      "<tables>"
+    ],
+    "correct_answer": "<table>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-010",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an HTML form for user input?",
+    "options": [
+      "<form>",
+      "<forms>",
+      "<h10>",
+      "<section>"
+    ],
+    "correct_answer": "<form>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-011",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an input control?",
+    "options": [
+      "<h11>",
+      "<input>",
+      "<inputs>",
+      "<section>"
+    ],
+    "correct_answer": "<input>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-012",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a clickable button?",
+    "options": [
+      "<button>",
+      "<buttons>",
+      "<h12>",
+      "<section>"
+    ],
+    "correct_answer": "<button>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-013",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a division or a section in an HTML document?",
+    "options": [
+      "<div>",
+      "<divs>",
+      "<h13>",
+      "<section>"
+    ],
+    "correct_answer": "<div>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-014",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a inline container used to mark up a part of a text?",
+    "options": [
+      "<h14>",
+      "<section>",
+      "<span>",
+      "<spans>"
+    ],
+    "correct_answer": "<span>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-015",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a header for a document or section?",
+    "options": [
+      "<h15>",
+      "<header>",
+      "<headers>",
+      "<section>"
+    ],
+    "correct_answer": "<header>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-016",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a footer for a document or section?",
+    "options": [
+      "<footer>",
+      "<footers>",
+      "<h16>",
+      "<section>"
+    ],
+    "correct_answer": "<footer>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-017",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a set of navigation links?",
+    "options": [
+      "<h17>",
+      "<nav>",
+      "<navs>",
+      "<section>"
+    ],
+    "correct_answer": "<nav>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-018",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines a section in a document?",
+    "options": [
+      "<h18>",
+      "<section>",
+      "<sections>",
+      "<tag3>"
+    ],
+    "correct_answer": "<section>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-019",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines an independent, self-contained content?",
+    "options": [
+      "<article>",
+      "<articles>",
+      "<h19>",
+      "<section>"
+    ],
+    "correct_answer": "<article>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-020",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "Which HTML tag is used to defines content aside from the page content?",
+    "options": [
+      "<aside>",
+      "<asides>",
+      "<h20>",
+      "<section>"
+    ],
+    "correct_answer": "<aside>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-021",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property changes the text color of an element?",
+    "options": [
+      "color",
+      "font-color",
+      "style",
+      "text-color"
+    ],
+    "correct_answer": "color",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-022",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the background color of an element?",
+    "options": [
+      "background-color",
+      "font-background-color",
+      "style",
+      "text-background-color"
+    ],
+    "correct_answer": "background-color",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-023",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the size of the font?",
+    "options": [
+      "font-font-size",
+      "font-size",
+      "style",
+      "text-font-size"
+    ],
+    "correct_answer": "font-size",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-024",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the font for an element?",
+    "options": [
+      "font-family",
+      "font-font-family",
+      "style",
+      "text-font-family"
+    ],
+    "correct_answer": "font-family",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-025",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the horizontal alignment of text?",
+    "options": [
+      "font-text-align",
+      "style",
+      "text-align",
+      "text-text-align"
+    ],
+    "correct_answer": "text-align",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-026",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the border of an element?",
+    "options": [
+      "border",
+      "font-border",
+      "style",
+      "text-border"
+    ],
+    "correct_answer": "border",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-027",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the space inside the border of an element?",
+    "options": [
+      "font-padding",
+      "padding",
+      "style",
+      "text-padding"
+    ],
+    "correct_answer": "padding",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-028",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the space outside the border of an element?",
+    "options": [
+      "font-margin",
+      "margin",
+      "style",
+      "text-margin"
+    ],
+    "correct_answer": "margin",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-029",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the width of an element?",
+    "options": [
+      "font-width",
+      "style",
+      "text-width",
+      "width"
+    ],
+    "correct_answer": "width",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-030",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property sets the height of an element?",
+    "options": [
+      "font-height",
+      "height",
+      "style",
+      "text-height"
+    ],
+    "correct_answer": "height",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-031",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the display behavior of an element?",
+    "options": [
+      "display",
+      "font-display",
+      "style",
+      "text-display"
+    ],
+    "correct_answer": "display",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-032",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the type of positioning method used for an element?",
+    "options": [
+      "font-position",
+      "position",
+      "style",
+      "text-position"
+    ],
+    "correct_answer": "position",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-033",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the top position of a positioned element?",
+    "options": [
+      "font-top",
+      "style",
+      "text-top",
+      "top"
+    ],
+    "correct_answer": "top",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-034",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the left position of a positioned element?",
+    "options": [
+      "font-left",
+      "left",
+      "style",
+      "text-left"
+    ],
+    "correct_answer": "left",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-035",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the stack order of an element?",
+    "options": [
+      "font-z-index",
+      "style",
+      "text-z-index",
+      "z-index"
+    ],
+    "correct_answer": "z-index",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-036",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies whether an element should float to the left, right, or not at all?",
+    "options": [
+      "float",
+      "font-float",
+      "style",
+      "text-float"
+    ],
+    "correct_answer": "float",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-037",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies which sides of an element other floating elements are not allowed to float on?",
+    "options": [
+      "clear",
+      "font-clear",
+      "style",
+      "text-clear"
+    ],
+    "correct_answer": "clear",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-038",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies what happens if content overflows an element's box?",
+    "options": [
+      "font-overflow",
+      "overflow",
+      "style",
+      "text-overflow"
+    ],
+    "correct_answer": "overflow",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-039",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property specifies the direction of the flexible items?",
+    "options": [
+      "flex-direction",
+      "font-flex-direction",
+      "style",
+      "text-flex-direction"
+    ],
+    "correct_answer": "flex-direction",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-040",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "Which CSS property aligns the flexible items along the main axis?",
+    "options": [
+      "font-justify-content",
+      "justify-content",
+      "style",
+      "text-justify-content"
+    ],
+    "correct_answer": "justify-content",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-041",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which attribute is used to specify a unique identifier for an HTML element?",
+    "options": [
+      "class",
+      "id",
+      "name",
+      "style"
+    ],
+    "correct_answer": "id",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-042",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which attribute is used to provide an alternative text for an image if it cannot be displayed?",
+    "options": [
+      "alt",
+      "title",
+      "src",
+      "href"
+    ],
+    "correct_answer": "alt",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-043",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "What does HTML stand for?",
+    "options": [
+      "Hyper Text Markup Language",
+      "Hyperlinks and Text Markup Language",
+      "Home Tool Markup Language",
+      "Hyper Tech Markup Language"
+    ],
+    "correct_answer": "Hyper Text Markup Language",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-044",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "What does CSS stand for?",
+    "options": [
+      "Cascading Style Sheets",
+      "Creative Style Sheets",
+      "Computer Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    "correct_answer": "Cascading Style Sheets",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-045",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which HTML element is used to define internal style sheets?",
+    "options": [
+      "<style>",
+      "<script>",
+      "<css>",
+      "<link>"
+    ],
+    "correct_answer": "<style>",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-046",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which CSS selector selects elements with a specific class?",
+    "options": [
+      ".class",
+      "#class",
+      "*class",
+      "element.class"
+    ],
+    "correct_answer": ".class",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-047",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which CSS selector selects elements with a specific ID?",
+    "options": [
+      ".id",
+      "#id",
+      "*id",
+      "element#id"
+    ],
+    "correct_answer": "#id",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-048",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which display property creates a flex container?",
+    "options": [
+      "flex",
+      "grid",
+      "block",
+      "inline-block"
+    ],
+    "correct_answer": "flex",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-049",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "Which CSS property controls the layout of grid columns?",
+    "options": [
+      "grid-template-columns",
+      "grid-column-gap",
+      "grid-columns",
+      "columns"
+    ],
+    "correct_answer": "grid-template-columns",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-050",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "What is the default value of the position property in CSS?",
+    "options": [
+      "static",
+      "relative",
+      "absolute",
+      "fixed"
+    ],
+    "correct_answer": "static",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "html-051",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-51' and text 'Element 51'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-51\" style=\"\">\n  Element 51\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-51\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-052",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-52' and text 'Element 52'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-52\" style=\"\">\n  Element 52\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-52\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-053",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-53' and text 'Element 53'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-53\" style=\"\">\n  Element 53\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-53\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-054",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-54' and text 'Element 54'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-54\" style=\"\">\n  Element 54\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-54\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-055",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-55' and text 'Element 55'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-55\" style=\"\">\n  Element 55\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-55\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-056",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-56' and text 'Element 56'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-56\" style=\"\">\n  Element 56\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-56\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-057",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-57' and text 'Element 57'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-57\" style=\"\">\n  Element 57\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-57\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-058",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-58' and text 'Element 58'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-58\" style=\"\">\n  Element 58\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-58\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-059",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-59' and text 'Element 59'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-59\" style=\"\">\n  Element 59\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-59\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-060",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-60' and text 'Element 60'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-60\" style=\"\">\n  Element 60\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-60\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-061",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-61' and text 'Element 61'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-61\" style=\"\">\n  Element 61\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-61\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-062",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-62' and text 'Element 62'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-62\" style=\"\">\n  Element 62\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-62\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-063",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-63' and text 'Element 63'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-63\" style=\"\">\n  Element 63\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-63\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-064",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-64' and text 'Element 64'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-64\" style=\"\">\n  Element 64\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-64\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-065",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-65' and text 'Element 65'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-65\" style=\"\">\n  Element 65\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-65\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-066",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-66' and text 'Element 66'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-66\" style=\"\">\n  Element 66\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-66\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-067",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-67' and text 'Element 67'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-67\" style=\"\">\n  Element 67\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-67\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-068",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-68' and text 'Element 68'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-68\" style=\"\">\n  Element 68\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-68\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-069",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-69' and text 'Element 69'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-69\" style=\"\">\n  Element 69\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-69\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-070",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Create an HTML element with ID 'el-70' and text 'Element 70'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-70\" style=\"\">\n  Element 70\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-70\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-071",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-71' and text 'Element 71'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-71\" style=\"\">\n  Element 71\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-71\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-072",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-72' and text 'Element 72'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-72\" style=\"\">\n  Element 72\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-72\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-073",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-73' and text 'Element 73'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-73\" style=\"\">\n  Element 73\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-73\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-074",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-74' and text 'Element 74'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-74\" style=\"\">\n  Element 74\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-74\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-075",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-75' and text 'Element 75'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-75\" style=\"\">\n  Element 75\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-75\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-076",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-76' and text 'Element 76'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-76\" style=\"\">\n  Element 76\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-76\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-077",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-77' and text 'Element 77'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-77\" style=\"\">\n  Element 77\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-77\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-078",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-78' and text 'Element 78'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-78\" style=\"\">\n  Element 78\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-78\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-079",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-79' and text 'Element 79'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-79\" style=\"\">\n  Element 79\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-79\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-080",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-80' and text 'Element 80'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-80\" style=\"\">\n  Element 80\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-80\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-081",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-81' and text 'Element 81'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-81\" style=\"\">\n  Element 81\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-81\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-082",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-82' and text 'Element 82'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-82\" style=\"\">\n  Element 82\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-82\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-083",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-83' and text 'Element 83'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-83\" style=\"\">\n  Element 83\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-83\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-084",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-84' and text 'Element 84'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-84\" style=\"\">\n  Element 84\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-84\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-085",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-85' and text 'Element 85'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-85\" style=\"\">\n  Element 85\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-85\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-086",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-86' and text 'Element 86'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-86\" style=\"\">\n  Element 86\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-86\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-087",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-87' and text 'Element 87'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-87\" style=\"\">\n  Element 87\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-87\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-088",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-88' and text 'Element 88'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-88\" style=\"\">\n  Element 88\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-88\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-089",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-89' and text 'Element 89'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-89\" style=\"\">\n  Element 89\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-89\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-090",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Create an HTML element with ID 'el-90' and text 'Element 90'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-90\" style=\"\">\n  Element 90\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-90\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-091",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-91' and text 'Element 91'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-91\" style=\"\">\n  Element 91\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-91\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-092",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-92' and text 'Element 92'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-92\" style=\"\">\n  Element 92\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-92\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-093",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-93' and text 'Element 93'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-93\" style=\"\">\n  Element 93\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-93\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-094",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-94' and text 'Element 94'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-94\" style=\"\">\n  Element 94\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-94\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-095",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-95' and text 'Element 95'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-95\" style=\"\">\n  Element 95\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-95\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-096",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-96' and text 'Element 96'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-96\" style=\"\">\n  Element 96\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-96\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-097",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-97' and text 'Element 97'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-97\" style=\"\">\n  Element 97\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-97\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-098",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-98' and text 'Element 98'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-98\" style=\"\">\n  Element 98\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-98\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-099",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-99' and text 'Element 99'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-99\" style=\"\">\n  Element 99\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-99\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  },
+  {
+    "id": "html-100",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Create an HTML element with ID 'el-100' and text 'Element 100'. Apply styling to make its text color red.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "<div id=\"el-100\" style=\"\">\n  Element 100\n</div>",
+    "test_cases": [
+      {
+        "input": "",
+        "expected": "contains:id=\"el-100\"",
+        "description": "Element must have correct ID"
+      },
+      {
+        "input": "",
+        "expected": "contains:color",
+        "description": "Must have color styling"
+      }
+    ]
+  }
+]
