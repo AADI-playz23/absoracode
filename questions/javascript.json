@@ -1,0 +1,1832 @@
+[
+  {
+    "id": "js-001",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 1: What is the output of console.log(typeof 1)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-002",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 2: What is the output of console.log(typeof 2)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-003",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 3: What is the output of console.log(typeof 3)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-004",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 4: What is the output of console.log(typeof 4)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-005",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 5: What is the output of console.log(typeof 5)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-006",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 6: What is the output of console.log(typeof 6)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-007",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 7: What is the output of console.log(typeof 7)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-008",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 8: What is the output of console.log(typeof 8)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-009",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 9: What is the output of console.log(typeof 9)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-010",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 10: What is the output of console.log(typeof 10)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-011",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 11: What is the output of console.log(typeof 11)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-012",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 12: What is the output of console.log(typeof 12)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-013",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 13: What is the output of console.log(typeof 13)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-014",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 14: What is the output of console.log(typeof 14)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-015",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 15: What is the output of console.log(typeof 15)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-016",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 16: What is the output of console.log(typeof 16)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-017",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 17: What is the output of console.log(typeof 17)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-018",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 18: What is the output of console.log(typeof 18)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-019",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 19: What is the output of console.log(typeof 19)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-020",
+    "type": "mcq",
+    "difficulty": "easy",
+    "prompt": "JavaScript MCQ Question 20: What is the output of console.log(typeof 20)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-021",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 21: What is the output of console.log(typeof 21)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-022",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 22: What is the output of console.log(typeof 22)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-023",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 23: What is the output of console.log(typeof 23)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-024",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 24: What is the output of console.log(typeof 24)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-025",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 25: What is the output of console.log(typeof 25)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-026",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 26: What is the output of console.log(typeof 26)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-027",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 27: What is the output of console.log(typeof 27)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-028",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 28: What is the output of console.log(typeof 28)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-029",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 29: What is the output of console.log(typeof 29)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-030",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 30: What is the output of console.log(typeof 30)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-031",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 31: What is the output of console.log(typeof 31)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-032",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 32: What is the output of console.log(typeof 32)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-033",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 33: What is the output of console.log(typeof 33)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-034",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 34: What is the output of console.log(typeof 34)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-035",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 35: What is the output of console.log(typeof 35)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-036",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 36: What is the output of console.log(typeof 36)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-037",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 37: What is the output of console.log(typeof 37)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-038",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 38: What is the output of console.log(typeof 38)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-039",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 39: What is the output of console.log(typeof 39)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-040",
+    "type": "mcq",
+    "difficulty": "medium",
+    "prompt": "JavaScript MCQ Question 40: What is the output of console.log(typeof 40)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-041",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 41: What is the output of console.log(typeof 41)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-042",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 42: What is the output of console.log(typeof 42)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-043",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 43: What is the output of console.log(typeof 43)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-044",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 44: What is the output of console.log(typeof 44)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-045",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 45: What is the output of console.log(typeof 45)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-046",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 46: What is the output of console.log(typeof 46)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-047",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 47: What is the output of console.log(typeof 47)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-048",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 48: What is the output of console.log(typeof 48)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-049",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 49: What is the output of console.log(typeof 49)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-050",
+    "type": "mcq",
+    "difficulty": "hard",
+    "prompt": "JavaScript MCQ Question 50: What is the output of console.log(typeof 50)?",
+    "options": [
+      "'number'",
+      "'string'",
+      "'undefined'",
+      "'object'"
+    ],
+    "correct_answer": "'number'",
+    "starter_code": null,
+    "test_cases": null
+  },
+  {
+    "id": "js-051",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy1 that takes a number and returns it multiplied by 1.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy1(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 2,
+        "description": "multiplyBy1(2) should return 2"
+      }
+    ]
+  },
+  {
+    "id": "js-052",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy2 that takes a number and returns it multiplied by 2.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy2(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 4,
+        "description": "multiplyBy2(2) should return 4"
+      }
+    ]
+  },
+  {
+    "id": "js-053",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy3 that takes a number and returns it multiplied by 3.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy3(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 6,
+        "description": "multiplyBy3(2) should return 6"
+      }
+    ]
+  },
+  {
+    "id": "js-054",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy4 that takes a number and returns it multiplied by 4.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy4(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 8,
+        "description": "multiplyBy4(2) should return 8"
+      }
+    ]
+  },
+  {
+    "id": "js-055",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy5 that takes a number and returns it multiplied by 5.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy5(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 10,
+        "description": "multiplyBy5(2) should return 10"
+      }
+    ]
+  },
+  {
+    "id": "js-056",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy6 that takes a number and returns it multiplied by 6.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy6(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 12,
+        "description": "multiplyBy6(2) should return 12"
+      }
+    ]
+  },
+  {
+    "id": "js-057",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy7 that takes a number and returns it multiplied by 7.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy7(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 14,
+        "description": "multiplyBy7(2) should return 14"
+      }
+    ]
+  },
+  {
+    "id": "js-058",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy8 that takes a number and returns it multiplied by 8.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy8(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 16,
+        "description": "multiplyBy8(2) should return 16"
+      }
+    ]
+  },
+  {
+    "id": "js-059",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy9 that takes a number and returns it multiplied by 9.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy9(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 18,
+        "description": "multiplyBy9(2) should return 18"
+      }
+    ]
+  },
+  {
+    "id": "js-060",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy10 that takes a number and returns it multiplied by 10.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy10(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 20,
+        "description": "multiplyBy10(2) should return 20"
+      }
+    ]
+  },
+  {
+    "id": "js-061",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy11 that takes a number and returns it multiplied by 11.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy11(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 22,
+        "description": "multiplyBy11(2) should return 22"
+      }
+    ]
+  },
+  {
+    "id": "js-062",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy12 that takes a number and returns it multiplied by 12.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy12(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 24,
+        "description": "multiplyBy12(2) should return 24"
+      }
+    ]
+  },
+  {
+    "id": "js-063",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy13 that takes a number and returns it multiplied by 13.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy13(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 26,
+        "description": "multiplyBy13(2) should return 26"
+      }
+    ]
+  },
+  {
+    "id": "js-064",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy14 that takes a number and returns it multiplied by 14.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy14(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 28,
+        "description": "multiplyBy14(2) should return 28"
+      }
+    ]
+  },
+  {
+    "id": "js-065",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy15 that takes a number and returns it multiplied by 15.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy15(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 30,
+        "description": "multiplyBy15(2) should return 30"
+      }
+    ]
+  },
+  {
+    "id": "js-066",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy16 that takes a number and returns it multiplied by 16.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy16(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 32,
+        "description": "multiplyBy16(2) should return 32"
+      }
+    ]
+  },
+  {
+    "id": "js-067",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy17 that takes a number and returns it multiplied by 17.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy17(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 34,
+        "description": "multiplyBy17(2) should return 34"
+      }
+    ]
+  },
+  {
+    "id": "js-068",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy18 that takes a number and returns it multiplied by 18.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy18(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 36,
+        "description": "multiplyBy18(2) should return 36"
+      }
+    ]
+  },
+  {
+    "id": "js-069",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy19 that takes a number and returns it multiplied by 19.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy19(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 38,
+        "description": "multiplyBy19(2) should return 38"
+      }
+    ]
+  },
+  {
+    "id": "js-070",
+    "type": "code",
+    "difficulty": "easy",
+    "prompt": "Write a function called multiplyBy20 that takes a number and returns it multiplied by 20.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function multiplyBy20(num) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          2
+        ],
+        "expected": 40,
+        "description": "multiplyBy20(2) should return 40"
+      }
+    ]
+  },
+  {
+    "id": "js-071",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue21 that takes an array of numbers and returns a new array with 21 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue21(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          22,
+          23
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-072",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue22 that takes an array of numbers and returns a new array with 22 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue22(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          23,
+          24
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-073",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue23 that takes an array of numbers and returns a new array with 23 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue23(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          24,
+          25
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-074",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue24 that takes an array of numbers and returns a new array with 24 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue24(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          25,
+          26
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-075",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue25 that takes an array of numbers and returns a new array with 25 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue25(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          26,
+          27
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-076",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue26 that takes an array of numbers and returns a new array with 26 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue26(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          27,
+          28
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-077",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue27 that takes an array of numbers and returns a new array with 27 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue27(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          28,
+          29
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-078",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue28 that takes an array of numbers and returns a new array with 28 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue28(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          29,
+          30
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-079",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue29 that takes an array of numbers and returns a new array with 29 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue29(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          30,
+          31
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-080",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue30 that takes an array of numbers and returns a new array with 30 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue30(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          31,
+          32
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-081",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue31 that takes an array of numbers and returns a new array with 31 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue31(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          32,
+          33
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-082",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue32 that takes an array of numbers and returns a new array with 32 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue32(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          33,
+          34
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-083",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue33 that takes an array of numbers and returns a new array with 33 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue33(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          34,
+          35
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-084",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue34 that takes an array of numbers and returns a new array with 34 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue34(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          35,
+          36
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-085",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue35 that takes an array of numbers and returns a new array with 35 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue35(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          36,
+          37
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-086",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue36 that takes an array of numbers and returns a new array with 36 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue36(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          37,
+          38
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-087",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue37 that takes an array of numbers and returns a new array with 37 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue37(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          38,
+          39
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-088",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue38 that takes an array of numbers and returns a new array with 38 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue38(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          39,
+          40
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-089",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue39 that takes an array of numbers and returns a new array with 39 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue39(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          40,
+          41
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-090",
+    "type": "code",
+    "difficulty": "medium",
+    "prompt": "Write a function called addValue40 that takes an array of numbers and returns a new array with 40 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue40(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          41,
+          42
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-091",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue41 that takes an array of numbers and returns a new array with 41 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue41(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          42,
+          43
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-092",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue42 that takes an array of numbers and returns a new array with 42 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue42(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          43,
+          44
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-093",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue43 that takes an array of numbers and returns a new array with 43 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue43(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          44,
+          45
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-094",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue44 that takes an array of numbers and returns a new array with 44 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue44(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          45,
+          46
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-095",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue45 that takes an array of numbers and returns a new array with 45 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue45(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          46,
+          47
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-096",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue46 that takes an array of numbers and returns a new array with 46 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue46(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          47,
+          48
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-097",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue47 that takes an array of numbers and returns a new array with 47 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue47(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          48,
+          49
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-098",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue48 that takes an array of numbers and returns a new array with 48 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue48(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          49,
+          50
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-099",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue49 that takes an array of numbers and returns a new array with 49 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue49(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          50,
+          51
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  },
+  {
+    "id": "js-100",
+    "type": "code",
+    "difficulty": "hard",
+    "prompt": "Write a function called addValue50 that takes an array of numbers and returns a new array with 50 added to each element.",
+    "options": null,
+    "correct_answer": null,
+    "starter_code": "function addValue50(arr) {\n  // your code here\n}",
+    "test_cases": [
+      {
+        "input": [
+          [
+            1,
+            2
+          ]
+        ],
+        "expected": [
+          51,
+          52
+        ],
+        "description": "Should add value to all array items"
+      }
+    ]
+  }
+]
