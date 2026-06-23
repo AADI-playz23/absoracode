@@ -4,6 +4,7 @@ import { query, queryOne, execute } from '@/lib/d1';
 import { getSessionUser } from '@/lib/auth';
 import { gradeWithGemini } from '@/lib/gemini';
 import { calculateMasteryFromCounts } from '@/lib/mastery';
+import { ensureQuestionsSeeded } from '@/lib/questions';
 import type { Problem, UserProgress, Submission, CustomLanguageBank, GeneratedQuestion } from '@/lib/types';
 
 // ─── JS test-case grader ──────────────────────────────────────────────────────
@@ -109,6 +110,9 @@ export async function POST(request: NextRequest) {
     if (!languageId || !answer) {
       return NextResponse.json({ error: 'languageId and answer are required' }, { status: 400 });
     }
+
+    // Ensure questions are seeded for the language track before processing submission
+    await ensureQuestionsSeeded(languageId);
 
     // ── Fetch the problem ──────────────────────────────────────────────────
     let problem: Problem | null       = null;
