@@ -9,9 +9,12 @@ interface MasteryCardProps {
 }
 
 const LANGUAGE_ICONS: Record<string, string> = {
-  'HTML & CSS':  '🎨',
-  'JavaScript':  '⚡',
   'Python':      '🐍',
+  'C++':         '⚙️',
+  'Java':        '☕',
+  'Rust':        '🦀',
+  'Golang':      '🐹',
+  'JumboLang':   '🐘',
 };
 
 export default function MasteryCard({
@@ -23,7 +26,7 @@ export default function MasteryCard({
   lastActive,
   languageId,
 }: MasteryCardProps) {
-  const pct      = Math.round(masteryScore * 100);
+  const pct      = isBuiltin ? Math.min(100, solvedCount) : Math.round(masteryScore * 100);
   const icon     = LANGUAGE_ICONS[languageName] ?? '💡';
   const accuracy = attemptedCount > 0 ? Math.round((solvedCount / attemptedCount) * 100) : 0;
 
@@ -72,7 +75,12 @@ export default function MasteryCard({
       </div>
 
       <div className="flex items-center justify-between text-xs text-white/40">
-        <span>{solvedCount} solved / {attemptedCount} attempted · {accuracy}% accuracy</span>
+        <span>
+          {isBuiltin 
+            ? `${solvedCount} / 100 solved · ${accuracy}% accuracy`
+            : `${solvedCount} solved / ${attemptedCount} attempted · ${accuracy}% accuracy`
+          }
+        </span>
         <span>
           {new Date(lastActive).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
         </span>
