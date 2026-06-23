@@ -9,6 +9,8 @@ interface MasteryCardProps {
 }
 
 const LANGUAGE_ICONS: Record<string, string> = {
+  'HTML & CSS':  '🎨',
+  'JavaScript':  '⚡',
   'Python':      '🐍',
   'C++':         '⚙️',
   'Java':        '☕',
