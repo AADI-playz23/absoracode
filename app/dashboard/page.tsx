@@ -35,11 +35,21 @@ export default function DashboardPage() {
 
   return (
     <div className="page-container section-padding">
-      <div className="mb-8">
-        <h1 className="text-3xl sm:text-4xl font-bold mb-2">
-          Your <span className="gradient-text">Dashboard</span>
-        </h1>
-        <p className="text-white/50">Track your mastery across all languages</p>
+      <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+        <div>
+          <h1 className="text-3xl sm:text-4xl font-bold mb-2">
+            Your <span className="gradient-text">Dashboard</span>
+          </h1>
+          <p className="text-white/50">Track your mastery across all languages</p>
+        </div>
+        <a
+          href="https://absoradevbox.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-brand-500/20 bg-brand-500/5 hover:bg-brand-500/10 text-brand-400 hover:text-brand-300 font-medium text-sm self-start sm:self-auto transition-all duration-200"
+        >
+          💻 Open DevBox ↗
+        </a>
       </div>
 
       {/* Stats bar */}
