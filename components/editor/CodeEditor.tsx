@@ -12,9 +12,12 @@ interface CodeEditorProps {
 }
 
 const LANGUAGE_MAP: Record<string, string> = {
-  'lang-javascript': 'javascript',
   'lang-python':     'python',
-  'lang-html-css':   'html',
+  'lang-cpp':        'cpp',
+  'lang-java':       'java',
+  'lang-rust':       'rust',
+  'lang-golang':     'go',
+  'lang-jumbolang':  'plaintext',
 };
 
 export default function CodeEditor({
