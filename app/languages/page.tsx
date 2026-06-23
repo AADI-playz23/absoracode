@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import { query } from '@/lib/d1';
 import type { Language } from '@/lib/types';
 
 export const metadata: Metadata = {
@@ -20,12 +21,9 @@ const LANG_META: Record<string, { icon: string; color: string; desc: string }> =
 
 async function getLanguages(): Promise<Language[]> {
   try {
-    const base = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000';
-    const res  = await fetch(`${base}/api/languages?builtin=1`, { cache: 'no-store' });
-    if (!res.ok) return [];
-    const data = await res.json();
-    return data.languages ?? [];
-  } catch {
+    return await query<Language>('SELECT * FROM languages WHERE is_builtin = 1 ORDER BY name');
+  } catch (err) {
+    console.error('[getLanguages D1 error]', err);
     return [];
   }
 }
@@ -49,7 +47,7 @@ export default async function LanguagesPage() {
         <h2 className="text-xs font-semibold uppercase tracking-widest text-white/30 mb-4">
           Built-in Tracks
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {languages.length === 0 ? (
             // Skeleton
             [1, 2, 3].map((i) => (
