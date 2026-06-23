@@ -12,6 +12,8 @@ interface CodeEditorProps {
 }
 
 const LANGUAGE_MAP: Record<string, string> = {
+  'lang-html-css':   'html',
+  'lang-javascript': 'javascript',
   'lang-python':     'python',
   'lang-cpp':        'cpp',
   'lang-java':       'java',
